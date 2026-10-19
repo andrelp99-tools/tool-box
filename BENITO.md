@@ -22,6 +22,6 @@ Il codice aggiunto è in `src/benito/`; nei file originali solo poche righe marc
 
 ## Fasi
 1. ✅ Base (questa)
-2. Convertitore universale (motori di VERT: immagini, audio, video in locale, documenti)
+2. ✅ Convertitore universale (`converters/converti`): immagini con ImageMagick WASM, audio e video con mediabunny/WebCodecs, tutto sul dispositivo. Nascosti i convertitori singoli doppioni (JPG, WebP, audio, JPG→PNG).
 3. QR (crea/leggi) + photo-scrubber, cropper social, compressore video, OCR (Simon Willison tools)
 4. Strumenti PDF da BentoPDF: pagine, firma e moduli, conversioni, sicurezza e pulizia

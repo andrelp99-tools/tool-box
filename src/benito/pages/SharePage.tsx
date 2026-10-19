@@ -64,6 +64,7 @@ function toolAccepts(tool: DefinedTool): Kind[] {
     case 'pdf':
       return p.includes('convert-to-pdf') ? ['image'] : ['pdf'];
     case 'converters':
+      if (p.includes('converti')) return ['image', 'audio', 'video'];
       if (p.includes('audio')) return ['audio'];
       if (p.includes('video')) return ['video'];
       return ['image'];

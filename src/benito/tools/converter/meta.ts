@@ -1,0 +1,20 @@
+import { defineTool } from '@tools/defineTool';
+import { lazy } from 'react';
+
+// BenitoTools: Convertitore universale (sostituisce i convertitori singoli di OmniTools)
+export const tool = defineTool('converters', {
+  i18n: {
+    name: 'converters:universal.title',
+    description: 'converters:universal.description',
+    shortDescription: 'converters:universal.shortDescription',
+    longDescription: 'converters:universal.longDescription'
+  },
+  path: 'converti',
+  icon: 'material-symbols:sync-alt-rounded',
+  keywords: [
+    'converti', 'convertire', 'convertitore', 'formato', 'convert', 'converter',
+    'jpg', 'png', 'webp', 'heic', 'avif', 'gif', 'mp3', 'mp4', 'wav', 'm4a', 'flac', 'ogg',
+    'webm', 'mov', 'mkv', 'audio', 'video', 'immagine', 'foto'
+  ],
+  component: lazy(() => import('./index'))
+});

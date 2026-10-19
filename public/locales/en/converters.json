@@ -53,5 +53,11 @@
     "resultTitle": "Output GIF",
     "shortDescription": "Convert video to animated GIF",
     "title": "Video to GIF"
+  },
+  "universal": {
+    "title": "Universal converter",
+    "description": "Convert images, audio and video between formats, right on your device. Images: JPG, PNG, WebP, AVIF, HEIC, GIF and more (also from RAW and HEIC photos). Audio: MP3, M4A, WAV, OGG, FLAC, AAC. Video: MP4, WebM, MKV, MOV, or extract only the audio.",
+    "shortDescription": "Convert images, audio and video to any format",
+    "longDescription": "Everything happens in your browser with ImageMagick (WebAssembly) for images and WebCodecs for audio and video: files never leave your device."
   }
 }
