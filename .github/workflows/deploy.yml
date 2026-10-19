@@ -33,6 +33,8 @@ jobs:
           node scripts/benito-assets.mjs
           curl -fsSL -o public/mediapipe/blaze_face_short_range.tflite \
             https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/1/blaze_face_short_range.tflite
+      - name: Motori per i documenti (LibreOffice, PyMuPDF, pandoc)
+        run: bash scripts/benito-engines.sh
       - name: Controllo tipi
         run: npx tsc --noEmit -p tsconfig.json
       - name: Test

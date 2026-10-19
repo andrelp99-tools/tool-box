@@ -26,6 +26,10 @@ import { tool as b_redact } from '../../../benito/tools/pdf/redact/meta';
 import { tool as b_flatten } from '../../../benito/tools/pdf/flatten/meta';
 import { tool as b_grayscale } from '../../../benito/tools/pdf/grayscale/meta';
 import { tool as b_repair } from '../../../benito/tools/pdf/repair/meta';
+// BenitoTools: documenti (motori pesanti, scaricati al primo uso)
+import { tool as b_office_to_pdf } from '../../../benito/tools/docs/office-to-pdf/meta';
+import { tool as b_pdf_to_word } from '../../../benito/tools/docs/pdf-to-word/meta';
+import { tool as b_pdf_to_excel } from '../../../benito/tools/docs/pdf-to-excel/meta';
 
 // BenitoTools: l'editor SimplePDF (servizio esterno) e PDF→PNG (sostituito da PDF in immagini) sono nascosti
 void pdfEditor;
@@ -38,6 +42,9 @@ export const pdfTools: DefinedTool[] = [
   b_sign,
   b_forms,
   compressPdfTool,
+  b_office_to_pdf,
+  b_pdf_to_word,
+  b_pdf_to_excel,
   b_to_images,
   convertToPdf,
   b_scan,

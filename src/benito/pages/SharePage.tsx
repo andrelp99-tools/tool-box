@@ -21,6 +21,7 @@ import { useBt } from '../strings';
 import { tools } from '../../tools';
 import { DefinedTool } from '../../tools/defineTool';
 import { validNamespaces } from '../../i18n';
+import { ALL_DOC_INPUT } from '../docs/convert';
 import {
   cleanupShared,
   deleteSharedEntry,
@@ -30,20 +31,37 @@ import {
   takePendingFiles
 } from '../sharedFiles';
 
-type Kind = 'image' | 'gif' | 'png' | 'jpeg' | 'video' | 'audio' | 'pdf' | 'text' | 'other';
+type Kind =
+  | 'image'
+  | 'gif'
+  | 'png'
+  | 'jpeg'
+  | 'video'
+  | 'audio'
+  | 'pdf'
+  | 'text'
+  | 'doc'
+  | 'other';
 
 function kindsOf(file: File): Kind[] {
   const t = file.type;
   const ext = (file.name.split('.').pop() ?? '').toLowerCase();
   if (t === 'image/gif' || ext === 'gif') return ['image', 'gif'];
   if (t === 'image/png' || ext === 'png') return ['image', 'png'];
-  if (t === 'image/jpeg' || ext === 'jpg' || ext === 'jpeg') return ['image', 'jpeg'];
-  if (t.startsWith('image/') || ['heic', 'heif', 'webp', 'bmp'].includes(ext)) return ['image'];
+  if (t === 'image/jpeg' || ext === 'jpg' || ext === 'jpeg')
+    return ['image', 'jpeg'];
+  if (t.startsWith('image/') || ['heic', 'heif', 'webp', 'bmp'].includes(ext))
+    return ['image'];
   if (t.startsWith('video/')) return ['video'];
   if (t.startsWith('audio/')) return ['audio'];
   if (t === 'application/pdf' || ext === 'pdf') return ['pdf'];
-  if (t.startsWith('text/') || ['txt', 'csv', 'json', 'xml', 'md', 'tsv'].includes(ext))
-    return ['text'];
+  const doc = ALL_DOC_INPUT.includes(ext);
+  if (
+    t.startsWith('text/') ||
+    ['txt', 'csv', 'json', 'xml', 'md', 'tsv'].includes(ext)
+  )
+    return doc ? ['text', 'doc'] : ['text'];
+  if (doc) return ['doc'];
   return ['other'];
 }
 
@@ -52,9 +70,15 @@ function toolAccepts(tool: DefinedTool): Kind[] {
   const p = tool.path;
   switch (tool.type) {
     case 'image-generic':
-      return p.endsWith('qr-code') ? [] : p.includes('image-to-text') ? ['png', 'jpeg'] : ['image'];
+      return p.endsWith('qr-code')
+        ? []
+        : p.includes('image-to-text')
+          ? ['png', 'jpeg']
+          : ['image'];
     case 'png':
-      return p.includes('jgp-to-png') || p.includes('jpg-to-png') ? ['jpeg'] : ['png'];
+      return p.includes('jgp-to-png') || p.includes('jpg-to-png')
+        ? ['jpeg']
+        : ['png'];
     case 'gif':
       return p.includes('images-to-gif') ? ['image'] : ['gif'];
     case 'video':
@@ -62,9 +86,13 @@ function toolAccepts(tool: DefinedTool): Kind[] {
     case 'audio':
       return p.includes('extract-audio') ? ['video'] : ['audio'];
     case 'pdf':
-      return p.includes('convert-to-pdf') || p.includes('scansione') ? ['image'] : ['pdf'];
+      if (p.includes('office-in-pdf')) return ['doc'];
+      return p.includes('convert-to-pdf') || p.includes('scansione')
+        ? ['image']
+        : ['pdf'];
     case 'converters':
-      if (p.includes('converti')) return ['image', 'audio', 'video'];
+      if (p.includes('converti'))
+        return ['image', 'audio', 'video', 'doc', 'pdf'];
       if (p.includes('audio')) return ['audio'];
       if (p.includes('video')) return ['video'];
       return ['image'];
@@ -126,7 +154,12 @@ export default function SharePage() {
   };
 
   return (
-    <Box width="100%" display="flex" justifyContent="center" p={{ xs: 2, md: 4 }}>
+    <Box
+      width="100%"
+      display="flex"
+      justifyContent="center"
+      p={{ xs: 2, md: 4 }}
+    >
       <Helmet title={`${bt.share.title} - BenitoTools`} />
       <Box width={{ xs: '100%', md: '80%', lg: '60%' }}>
         <Stack direction="row" alignItems="center" spacing={1} mb={1}>
@@ -153,11 +186,17 @@ export default function SharePage() {
             </Typography>
             <Stack direction="row" flexWrap="wrap" gap={1} mb={2}>
               {files.map((f, i) => (
-                <Chip key={i} label={f.name} icon={<Icon icon="material-symbols:draft-outline-rounded" />} />
+                <Chip
+                  key={i}
+                  label={f.name}
+                  icon={<Icon icon="material-symbols:draft-outline-rounded" />}
+                />
               ))}
               {text && (
                 <Chip
-                  label={`${bt.share.textReceived}: ${text.slice(0, 40)}${text.length > 40 ? '…' : ''}`}
+                  label={`${bt.share.textReceived}: ${text.slice(0, 40)}${
+                    text.length > 40 ? '…' : ''
+                  }`}
                   icon={<Icon icon="material-symbols:notes-rounded" />}
                 />
               )}
@@ -177,11 +216,20 @@ export default function SharePage() {
                 {matching.map((tool) => (
                   <Grid item xs={12} sm={6} key={tool.path}>
                     <Card variant="outlined" sx={{ height: '100%' }}>
-                      <CardActionArea onClick={() => open(tool)} sx={{ p: 1.5, height: '100%' }}>
-                        <Stack direction="row" spacing={1.5} alignItems="center">
+                      <CardActionArea
+                        onClick={() => open(tool)}
+                        sx={{ p: 1.5, height: '100%' }}
+                      >
+                        <Stack
+                          direction="row"
+                          spacing={1.5}
+                          alignItems="center"
+                        >
                           <Icon icon={tool.icon} fontSize={28} />
                           <Box minWidth={0}>
-                            <Typography fontWeight={600}>{t(tool.name)}</Typography>
+                            <Typography fontWeight={600}>
+                              {t(tool.name)}
+                            </Typography>
                             <Typography variant="body2" color="text.secondary">
                               {t(tool.shortDescription)}
                             </Typography>

@@ -56,8 +56,8 @@
   },
   "universal": {
     "title": "Convertitore universale",
-    "description": "Converti immagini, audio e video tra formati diversi, direttamente sul dispositivo. Immagini: JPG, PNG, WebP, AVIF, HEIC, GIF e altri (anche da foto RAW e HEIC). Audio: MP3, M4A, WAV, OGG, FLAC, AAC. Video: MP4, WebM, MKV, MOV, oppure estrai solo l'audio.",
-    "shortDescription": "Converti immagini, audio e video in qualsiasi formato",
-    "longDescription": "Tutto avviene nel browser con ImageMagick (WebAssembly) per le immagini e WebCodecs per audio e video: i file non lasciano mai il dispositivo."
+    "description": "Converti immagini, audio, video e documenti tra formati diversi, direttamente sul dispositivo. Immagini: JPG, PNG, WebP, AVIF, HEIC, GIF e altri (anche da foto RAW e HEIC). Audio: MP3, M4A, WAV, OGG, FLAC, AAC. Video: MP4, WebM, MKV, MOV, oppure estrai solo l'audio. Documenti: Word, Excel, PowerPoint, OpenDocument, PDF, Markdown, HTML, EPUB e altri.",
+    "shortDescription": "Converti immagini, audio, video e documenti in qualsiasi formato",
+    "longDescription": "Tutto avviene nel browser: ImageMagick (WebAssembly) per le immagini, WebCodecs per audio e video, LibreOffice, pandoc e PyMuPDF (WebAssembly) per i documenti. I file non lasciano mai il dispositivo. I motori dei documenti si scaricano solo la prima volta che servono."
   }
 }

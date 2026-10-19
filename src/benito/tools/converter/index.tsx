@@ -1,5 +1,6 @@
-// BenitoTools: Convertitore universale (immagini, audio, video) sul dispositivo.
-// Motori: ImageMagick WASM (immagini) e mediabunny/WebCodecs (audio e video).
+// BenitoTools: Convertitore universale (immagini, audio, video, documenti) sul dispositivo.
+// Motori: ImageMagick WASM (immagini), mediabunny/WebCodecs (audio e video),
+// LibreOffice / pandoc / PyMuPDF in WASM (documenti, vedi src/benito/docs).
 import React, { useMemo, useRef, useState } from 'react';
 import {
   Alert,
@@ -32,6 +33,26 @@ import {
   outputsFor,
   VIDEO_INPUT_EXT
 } from '../../convert/formats';
+import {
+  ALL_DOC_INPUT,
+  DOC_DEFAULT,
+  DOC_OUTPUT,
+  DocFamily,
+  docFamilyOf,
+  enginesFor,
+  uniqueName
+} from '../../docs/convert';
+import { docErrorText, EngineNotice, formatLabel } from '../../docs/ui';
+import { useIsolation } from '../../docs/isolation';
+
+const DOC_FAMILIES: DocFamily[] = [
+  'text',
+  'sheet',
+  'slides',
+  'drawing',
+  'ebook',
+  'pdf'
+];
 
 interface Options {
   imageTo: string;
@@ -41,6 +62,7 @@ interface Options {
   mediaQuality: 'low' | 'medium' | 'high';
   maxSide: string;
   stripMetadata: boolean;
+  docTo: Record<DocFamily, string>;
 }
 
 const initialValues: Options = {
@@ -50,20 +72,33 @@ const initialValues: Options = {
   imageQuality: 85,
   mediaQuality: 'medium',
   maxSide: '',
-  stripMetadata: true
+  stripMetadata: true,
+  docTo: { ...DOC_DEFAULT }
 };
 
 const ACCEPT = [
   'image/*',
   'audio/*',
   'video/*',
-  ...[...IMAGE_INPUT_EXT, ...AUDIO_INPUT_EXT, ...VIDEO_INPUT_EXT].map((e) => `.${e}`)
+  'application/pdf',
+  ...[
+    ...IMAGE_INPUT_EXT,
+    ...AUDIO_INPUT_EXT,
+    ...VIDEO_INPUT_EXT,
+    ...ALL_DOC_INPUT
+  ].map((e) => `.${e}`)
 ];
 
-type Status = { state: 'waiting' | 'working' | 'done' | 'error'; progress: number; error?: string };
+type Status = {
+  state: 'waiting' | 'working' | 'done' | 'error';
+  progress: number;
+  error?: string;
+  stage?: string;
+};
 
 export default function UniversalConverter({ title }: ToolComponentProps) {
   const bt = useBt();
+  useIsolation();
   const [input, setInput] = useState<File[]>([]);
   const [values, setValues] = useState<Options>(initialValues);
   const [status, setStatus] = useState<Status[]>([]);
@@ -81,10 +116,32 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
     return s;
   }, [input]);
 
-  const hasMedia = cats.has('audio') || cats.has('video');
-  const noWebCodecs = hasMedia && typeof (window as any).AudioEncoder === 'undefined';
+  const docFams = useMemo(() => {
+    const s = new Set<DocFamily>();
+    input.forEach((f) => {
+      const c = categoryOf(f);
+      const d = c === 'document' ? docFamilyOf(f) : null;
+      if (d) s.add(d);
+    });
+    return s;
+  }, [input]);
 
-  const targetFor = (c: Category, v: Options) =>
+  const neededEngines = useMemo(
+    () =>
+      input.flatMap((f) => {
+        if (categoryOf(f) !== 'document') return [];
+        const d = docFamilyOf(f);
+        return d ? enginesFor(f, values.docTo[d]) : [];
+      }),
+    [input, values.docTo]
+  );
+
+  const hasMedia = cats.has('audio') || cats.has('video');
+  const onlyDocs = cats.size > 0 && !cats.has('image') && !hasMedia;
+  const noWebCodecs =
+    hasMedia && typeof (window as any).AudioEncoder === 'undefined';
+
+  const targetFor = (c: Exclude<Category, 'document'>, v: Options) =>
     c === 'image' ? v.imageTo : c === 'audio' ? v.audioTo : v.videoTo;
 
   const run = async () => {
@@ -107,9 +164,20 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
       setStatus([...st]);
       try {
         if (!cat) throw new Error(bt.convert.unsupported);
-        const to = targetFor(cat, values);
         let result: File;
-        if (cat === 'image') {
+        if (cat === 'document') {
+          const fam = docFamilyOf(file) as DocFamily;
+          const { convertDocument } = await import('../../docs/convert');
+          result = await convertDocument(file, values.docTo[fam], (stage) => {
+            st[i] = {
+              state: 'working',
+              progress: 0,
+              stage: bt.docs.stage[stage]
+            };
+            setStatus([...st]);
+          });
+        } else if (cat === 'image') {
+          const to = targetFor(cat, values);
           const { convertImage } = await import('../../convert/image');
           result = await convertImage(file, to, {
             quality: values.imageQuality,
@@ -118,7 +186,7 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
           });
         } else {
           const { convertMedia } = await import('../../convert/media');
-          result = await convertMedia(file, to, {
+          result = await convertMedia(file, targetFor(cat, values), {
             quality: values.mediaQuality,
             maxSide,
             signal: ctrl.signal,
@@ -128,10 +196,11 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
             }
           });
         }
-        out.push(result);
+        out.push(uniqueName(result, out));
         st[i] = { state: 'done', progress: 1 };
       } catch (e) {
-        st[i] = { state: 'error', progress: 0, error: (e as Error)?.message ?? String(e) };
+        console.error(e);
+        st[i] = { state: 'error', progress: 0, error: docErrorText(e, bt) };
       }
       setStatus([...st]);
       setResults([...out]);
@@ -182,11 +251,16 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
     <Box>
       <InputHeader title={bt.convert.convert} />
       <Stack spacing={1} mb={2}>
-        {noWebCodecs && <Alert severity="warning">{bt.convert.noWebCodecs}</Alert>}
+        {noWebCodecs && (
+          <Alert severity="warning">{bt.convert.noWebCodecs}</Alert>
+        )}
         {cats.has('image') && !running && results.length === 0 && (
           <Typography variant="caption" color="text.secondary">
             {bt.convert.firstImage}
           </Typography>
+        )}
+        {!running && results.length === 0 && (
+          <EngineNotice engines={neededEngines} />
         )}
         <Stack direction="row" spacing={1}>
           <Button
@@ -223,7 +297,7 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
                     : s.state === 'error'
                       ? bt.convert.failed
                       : s.state === 'working'
-                        ? `${Math.round(s.progress * 100)}%`
+                        ? s.stage ?? `${Math.round(s.progress * 100)}%`
                         : ''}
                 </Typography>
               </Stack>
@@ -243,7 +317,11 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
         )}
       </Stack>
       {results.length > 0 && (
-        <ToolMultiFileResult title={bt.convert.result} value={results} zipFile={zip} />
+        <ToolMultiFileResult
+          title={bt.convert.result}
+          value={results}
+          zipFile={zip}
+        />
       )}
     </Box>
   );
@@ -254,7 +332,12 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
       input={input}
       setInput={setInput}
       inputComponent={
-        <MultiFileInput value={input} onChange={setInput} accept={ACCEPT} title={bt.convert.input} />
+        <MultiFileInput
+          value={input}
+          onChange={setInput}
+          accept={ACCEPT}
+          title={bt.convert.input}
+        />
       }
       resultComponent={resultPanel}
       initialValues={initialValues}
@@ -265,9 +348,19 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
           component: (
             <Box>
               {(cats.size === 0 || cats.has('image')) &&
-                formatSelect(`${bt.convert.images} → ${bt.convert.to}`, v.imageTo, outputsFor('image'), (x) => updateField('imageTo', x))}
+                formatSelect(
+                  `${bt.convert.images} → ${bt.convert.to}`,
+                  v.imageTo,
+                  outputsFor('image'),
+                  (x) => updateField('imageTo', x)
+                )}
               {(cats.size === 0 || cats.has('audio')) &&
-                formatSelect(`${bt.convert.audio} → ${bt.convert.to}`, v.audioTo, outputsFor('audio'), (x) => updateField('audioTo', x))}
+                formatSelect(
+                  `${bt.convert.audio} → ${bt.convert.to}`,
+                  v.audioTo,
+                  outputsFor('audio'),
+                  (x) => updateField('audioTo', x)
+                )}
               {(cats.size === 0 || cats.has('video')) &&
                 formatSelect(
                   `${bt.convert.videos} → ${bt.convert.to}`,
@@ -276,68 +369,125 @@ export default function UniversalConverter({ title }: ToolComponentProps) {
                   (x) => updateField('videoTo', x),
                   bt.convert.videoAudioHint
                 )}
-            </Box>
-          )
-        },
-        {
-          title: bt.convert.quality,
-          component: (
-            <Box>
-              {(cats.size === 0 || cats.has('image')) && (
-                <Box mb={2}>
-                  <Typography variant="body2" color="text.secondary">
-                    {bt.convert.images}: {v.imageQuality}%
-                  </Typography>
-                  <Slider
-                    value={v.imageQuality}
-                    min={10}
-                    max={100}
-                    onChange={(_, val) => updateField('imageQuality', val as number)}
-                  />
-                  <Typography variant="caption" color="text.secondary">
-                    {bt.convert.imageQualityDesc}
-                  </Typography>
-                </Box>
-              )}
-              {(cats.size === 0 || hasMedia) && (
-                <Box mb={2}>
-                  <Typography variant="body2" color="text.secondary" gutterBottom>
-                    {bt.convert.audio} / {bt.convert.videos}
+              {DOC_FAMILIES.filter(
+                (f) =>
+                  docFams.has(f) ||
+                  (cats.size === 0 && f !== 'drawing' && f !== 'ebook')
+              ).map((f) => (
+                <Box key={f} mb={2}>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    {bt.docs[f]} → {bt.convert.to}
                   </Typography>
                   <Select
                     size="small"
                     fullWidth
-                    value={v.mediaQuality}
-                    onChange={(e) => updateField('mediaQuality', e.target.value as Options['mediaQuality'])}
+                    value={v.docTo[f]}
+                    onChange={(e) =>
+                      updateField('docTo', { ...v.docTo, [f]: e.target.value })
+                    }
                   >
-                    <MenuItem value="low">{bt.convert.qualityLow}</MenuItem>
-                    <MenuItem value="medium">{bt.convert.qualityMedium}</MenuItem>
-                    <MenuItem value="high">{bt.convert.qualityHigh}</MenuItem>
+                    {DOC_OUTPUT[f].map((o) => (
+                      <MenuItem key={o} value={o}>
+                        {formatLabel(o, bt)}
+                      </MenuItem>
+                    ))}
                   </Select>
+                  {f === 'pdf' && (
+                    <Typography variant="caption" color="text.secondary">
+                      {bt.docs.pdfHint}
+                    </Typography>
+                  )}
                 </Box>
-              )}
-              <TextField
-                size="small"
-                fullWidth
-                type="number"
-                label={bt.convert.maxSide}
-                helperText={bt.convert.maxSideDesc}
-                value={v.maxSide}
-                onChange={(e) => updateField('maxSide', e.target.value)}
-                sx={{ mb: 1 }}
-              />
-              <FormControlLabel
-                control={
-                  <Switch
-                    checked={v.stripMetadata}
-                    onChange={(e) => updateField('stripMetadata', e.target.checked)}
-                  />
-                }
-                label={bt.convert.strip}
-              />
+              ))}
             </Box>
           )
-        }
+        },
+        ...(onlyDocs
+          ? []
+          : [
+              {
+                title: bt.convert.quality,
+                component: (
+                  <Box>
+                    {(cats.size === 0 || cats.has('image')) && (
+                      <Box mb={2}>
+                        <Typography variant="body2" color="text.secondary">
+                          {bt.convert.images}: {v.imageQuality}%
+                        </Typography>
+                        <Slider
+                          value={v.imageQuality}
+                          min={10}
+                          max={100}
+                          onChange={(_, val) =>
+                            updateField('imageQuality', val as number)
+                          }
+                        />
+                        <Typography variant="caption" color="text.secondary">
+                          {bt.convert.imageQualityDesc}
+                        </Typography>
+                      </Box>
+                    )}
+                    {(cats.size === 0 || hasMedia) && (
+                      <Box mb={2}>
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          gutterBottom
+                        >
+                          {bt.convert.audio} / {bt.convert.videos}
+                        </Typography>
+                        <Select
+                          size="small"
+                          fullWidth
+                          value={v.mediaQuality}
+                          onChange={(e) =>
+                            updateField(
+                              'mediaQuality',
+                              e.target.value as Options['mediaQuality']
+                            )
+                          }
+                        >
+                          <MenuItem value="low">
+                            {bt.convert.qualityLow}
+                          </MenuItem>
+                          <MenuItem value="medium">
+                            {bt.convert.qualityMedium}
+                          </MenuItem>
+                          <MenuItem value="high">
+                            {bt.convert.qualityHigh}
+                          </MenuItem>
+                        </Select>
+                      </Box>
+                    )}
+                    <TextField
+                      size="small"
+                      fullWidth
+                      type="number"
+                      label={bt.convert.maxSide}
+                      helperText={bt.convert.maxSideDesc}
+                      value={v.maxSide}
+                      onChange={(e) => updateField('maxSide', e.target.value)}
+                      sx={{ mb: 1 }}
+                    />
+                    <FormControlLabel
+                      control={
+                        <Switch
+                          checked={v.stripMetadata}
+                          onChange={(e) =>
+                            updateField('stripMetadata', e.target.checked)
+                          }
+                        />
+                      }
+                      label={bt.convert.strip}
+                    />
+                  </Box>
+                )
+              }
+            ])
       ]}
     />
   );

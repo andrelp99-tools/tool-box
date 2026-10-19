@@ -30,4 +30,13 @@ Il codice aggiunto è in `src/benito/`; nei file originali solo poche righe marc
    intestazioni, Filigrana e timbri, Ritaglia margini, PDF in immagini, PDF in testo, Scansione in PDF, OCR PDF
    (ricercabile), Sblocca (qpdf WASM), Rimuovi metadati, Oscura, Appiattisci, Bianco e nero, Ripara.
    Nascosti: editor SimplePDF (servizio esterno), PDF→PNG e Ruota PDF (coperti da PDF in immagini e Organizza).
-   In sospeso (motori pesanti, da decidere): Word/Excel/PowerPoint→PDF, PDF→Word, conversione documenti.
+5. ✅ Documenti (motori pesanti, scaricati solo al primo uso e poi offline):
+   - **Convertitore universale** ora accetta anche documenti: Word, Excel, PowerPoint, OpenDocument, RTF, Markdown,
+     HTML, EPUB, PDF, eBook (MOBI, FB2, CBZ, XPS), Visio/Publisher. Sceglie da solo il motore (anche due in fila).
+   - Scorciatoie nella sezione PDF: **Office in PDF**, **PDF in Word** (anche Markdown/HTML), **PDF in Excel** (tabelle → XLSX/CSV).
+   - Motori (`src/benito/docs/`, scaricati in fase di build da `scripts/benito-engines.sh` in `public/engines/`):
+     LibreOffice WASM (@matbee/libreoffice-converter, MPL-2.0, ~75 MB), PyMuPDF + pdf2docx in Pyodide
+     (@bentopdf/pymupdf-wasm + gs-wasm, AGPL-3.0, ~70 MB), pandoc 3.9 ufficiale (pandoc-wasm, GPL-2.0+, ~16 MB).
+   - LibreOffice richiede la pagina "isolata" (SharedArrayBuffer): GitHub Pages non permette intestazioni personalizzate,
+     quindi le aggiunge il service worker (`COEP: credentialless`, `COOP: same-origin`). Se la pagina è stata aperta
+     prima del service worker, lo strumento la ricarica una volta da solo.

@@ -24,7 +24,7 @@ export default defineConfig({
       injectRegister: 'auto',
       injectManifest: {
         globPatterns: ['**/*.{js,css,html,png,ico,svg,json,woff2}'],
-        globIgnores: ['**/locales/!(it|en)/**', 'docs-images/**', 'mediapipe/**'],
+        globIgnores: ['**/locales/!(it|en)/**', 'docs-images/**', 'mediapipe/**', 'engines/**'],
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024
       },
       manifest: {
@@ -63,7 +63,27 @@ export default defineConfig({
                   '.csv',
                   '.json',
                   '.xml',
-                  '.heic'
+                  '.heic',
+                  // BenitoTools: documenti
+                  'application/msword',
+                  'application/vnd.openxmlformats-officedocument.*',
+                  'application/vnd.oasis.opendocument.*',
+                  'application/vnd.ms-excel',
+                  'application/vnd.ms-powerpoint',
+                  'application/rtf',
+                  'application/epub+zip',
+                  '.docx',
+                  '.doc',
+                  '.xlsx',
+                  '.xls',
+                  '.pptx',
+                  '.ppt',
+                  '.odt',
+                  '.ods',
+                  '.odp',
+                  '.rtf',
+                  '.epub',
+                  '.md'
                 ]
               }
             ]

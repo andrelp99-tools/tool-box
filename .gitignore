@@ -49,3 +49,4 @@ error.txt
 
 # BenitoTools: file generati da scripts/benito-assets.mjs e dal workflow
 /public/mediapipe
+/public/engines

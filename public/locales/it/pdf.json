@@ -215,5 +215,20 @@
     "title": "Ripara PDF",
     "description": "Prova a sistemare i PDF danneggiati che non si aprono o danno errori.",
     "shortDescription": "Ripara i file PDF danneggiati"
+  },
+  "benitoOfficeToPdf": {
+    "title": "Office in PDF",
+    "description": "Trasforma documenti Word, fogli Excel, presentazioni PowerPoint e file OpenDocument (ODT, ODS, ODP, RTF…) in PDF, direttamente sul telefono con LibreOffice. Al primo uso scarica il motore (~75 MB).",
+    "shortDescription": "Word, Excel e PowerPoint in PDF"
+  },
+  "benitoPdfToWord": {
+    "title": "PDF in Word",
+    "description": "Trasforma un PDF in un documento Word (DOCX) modificabile, mantenendo testo, tabelle e immagini il più possibile. Anche in Markdown o HTML. Al primo uso scarica il motore (~70 MB).",
+    "shortDescription": "Trasforma un PDF in un Word modificabile"
+  },
+  "benitoPdfToExcel": {
+    "title": "PDF in Excel",
+    "description": "Trova le tabelle dentro un PDF e le salva in un file Excel (un foglio per tabella) o CSV. Al primo uso scarica il motore (~70 MB).",
+    "shortDescription": "Estrai le tabelle di un PDF in Excel o CSV"
   }
 }

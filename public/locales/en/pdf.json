@@ -215,5 +215,20 @@
     "title": "Repair PDF",
     "description": "Try to fix damaged PDFs that do not open or show errors.",
     "shortDescription": "Fix damaged PDF files"
+  },
+  "benitoOfficeToPdf": {
+    "title": "Office to PDF",
+    "description": "Turn Word documents, Excel sheets, PowerPoint presentations and OpenDocument files (ODT, ODS, ODP, RTF…) into PDF, right on your phone with LibreOffice. The engine (~75 MB) is downloaded on first use.",
+    "shortDescription": "Word, Excel and PowerPoint to PDF"
+  },
+  "benitoPdfToWord": {
+    "title": "PDF to Word",
+    "description": "Turn a PDF into an editable Word document (DOCX), keeping text, tables and images as much as possible. Also to Markdown or HTML. The engine (~70 MB) is downloaded on first use.",
+    "shortDescription": "Turn a PDF into an editable Word file"
+  },
+  "benitoPdfToExcel": {
+    "title": "PDF to Excel",
+    "description": "Find the tables inside a PDF and save them to an Excel file (one sheet per table) or CSV. The engine (~70 MB) is downloaded on first use.",
+    "shortDescription": "Extract PDF tables to Excel or CSV"
   }
 }
