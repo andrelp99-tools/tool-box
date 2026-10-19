@@ -1,6 +1,6 @@
 # BenitoTools
 
-App personale di strumenti per file, testo e dati, installabile sul telefono (PWA) e pubblicata su
+App personale di strumenti per file, testo e dati, installabile sul telefono (PWA). Link:
 https://andrelp99-tools.github.io/tool-box/
 
 Base: fork di [OmniTools](https://github.com/iib0011/omni-tools) (MIT).
