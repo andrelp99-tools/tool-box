@@ -12,6 +12,8 @@ import ResultFooter from './ResultFooter';
 import { useTranslation } from 'react-i18next';
 import React, { useContext } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
+import { addToHistory } from '../../benito/history';
+import { useBt } from '../../benito/strings';
 
 export default function ToolMultiFileResult({
   title = 'Result',
@@ -27,6 +29,7 @@ export default function ToolMultiFileResult({
   loadingText?: string;
 }) {
   const { t } = useTranslation();
+  const bt = useBt();
   const theme = useTheme();
   const { showSnackBar } = useContext(CustomSnackBarContext);
 
@@ -49,6 +52,7 @@ export default function ToolMultiFileResult({
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+    addToHistory(file); // BenitoTools
   };
 
   const handleCopy = () => {
@@ -139,16 +143,14 @@ export default function ToolMultiFileResult({
                 {fileType === 'pdf' && (
                   <iframe src={preview} width="100%" height="400px" />
                 )}
-                {fileType === 'unknown' && (
-                  <Typography>File ready. Click below to download.</Typography>
-                )}
+                {fileType === 'unknown' && <Typography>{file.name}</Typography>}
                 <Button
                   onClick={() => handleDownload(file)}
                   size="small"
                   sx={{ mt: 1 }}
                   variant="contained"
                 >
-                  Download {file.name}
+                  {t('resultFooter.download')} {file.name}
                 </Button>
               </Box>
             );
@@ -156,7 +158,8 @@ export default function ToolMultiFileResult({
         )}
       </Box>
       <ResultFooter
-        downloadLabel={'Download All as ZIP'}
+        downloadLabel={bt.result.downloadZip}
+        files={value}
         hideCopy
         disabled={!zipFile}
         handleDownload={() => zipFile && handleDownload(zipFile)}

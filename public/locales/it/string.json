@@ -1,0 +1,423 @@
+{
+  "base64": {
+    "decode": "Decodifica Base64",
+    "description": "Codifica o decodifica testo in Base64.",
+    "encode": "Codifica Base64",
+    "inputTitle": "Dati in ingresso",
+    "optionsTitle": "Opzioni Base64",
+    "resultTitle": "Risultato",
+    "shortDescription": "Codifica o decodifica dati in Base64.",
+    "title": "Codifica/decodifica Base64",
+    "toolInfo": {
+      "description": "Base64 è una codifica che rappresenta i dati come testo ASCII usando 64 simboli. Si usa soprattutto per trasmettere dati binari attraverso canali pensati per il testo.",
+      "title": "Cos'è Base64?"
+    }
+  },
+  "censor": {
+    "description": "Strumento per censurare parole in un testo. Inserisci il testo a sinistra, indica le parole da censurare nelle opzioni (una per riga) e ottieni subito il testo censurato. Le parole possono essere mascherate o sostituite con alternative.",
+    "shortDescription": "Maschera o sostituisci subito le parolacce o le parole da nascondere.",
+    "title": "Censura testo"
+  },
+  "createPalindrome": {
+    "description": "Strumento semplicissimo per creare palindromi da qualsiasi testo. Inserisci un testo e trasformalo subito in un palindromo che si legge uguale nei due sensi. Ideale per giochi di parole e curiosità linguistiche.",
+    "shortDescription": "Crea un testo che si legge uguale nei due sensi",
+    "title": "Crea palindromo"
+  },
+  "emailExtractor": {
+    "description": "Estrai tutti gli indirizzi email da qualsiasi testo. Incolla il testo e ottieni subito l'elenco pulito delle email trovate.",
+    "options": {
+      "title": "Opzioni di estrazione",
+      "uniqueDesc": "Tieni solo gli indirizzi email unici",
+      "uniqueTitle": "Togli duplicati"
+    },
+    "shortDescription": "Estrai gli indirizzi email da un testo",
+    "title": "Estrai email"
+  },
+  "extractSubstring": {
+    "description": "Strumento semplicissimo per estrarre una parte di testo: indica posizione iniziale e finale. Ideale per elaborare dati o estrarre contenuti specifici da testi lunghi.",
+    "shortDescription": "Estrai una parte di testo tra due posizioni",
+    "title": "Estrai sottostringa"
+  },
+  "hiddenCharacterDetector": {
+    "analysisOptions": "Opzioni di analisi",
+    "category": "Categoria",
+    "description": "Trova caratteri Unicode nascosti, in particolare quelli di inversione RTL che possono essere usati negli attacchi.",
+    "foundChars": "Trovati {{count}} caratteri nascosti:",
+    "inputPlaceholder": "Inserisci il testo da controllare...",
+    "inputTitle": "Testo da analizzare",
+    "invisibleChar": "Carattere invisibile",
+    "invisibleFound": "Trovati caratteri invisibili",
+    "longDescription": "Questo strumento trova caratteri Unicode nascosti nel testo, in particolare quelli di inversione destra-sinistra (RTL Override) che possono essere usati negli attacchi. Riconosce caratteri invisibili, a larghezza zero e altre sequenze Unicode potenzialmente pericolose nascoste in testi apparentemente innocui.",
+    "noHiddenChars": "Nessun carattere nascosto trovato.",
+    "optionsDescription": "Scegli quali caratteri nascosti cercare e come mostrare i risultati.",
+    "position": "Posizione",
+    "rtlAlert": "⚠️ Trovati caratteri RTL Override! Il testo potrebbe contenere caratteri nascosti malevoli.",
+    "rtlFound": "Trovato RTL Override",
+    "rtlOverride": "Carattere RTL Override",
+    "rtlWarning": "ATTENZIONE: trovati caratteri RTL Override! Potrebbero essere usati in un attacco.",
+    "shortDescription": "Trova caratteri Unicode nascosti nel testo",
+    "summary": "Riepilogo",
+    "title": "Trova caratteri nascosti",
+    "totalChars": "Caratteri nascosti totali: {{count}}",
+    "unicode": "Unicode",
+    "zeroWidthChar": "Carattere a larghezza zero",
+    "zeroWidthFound": "Trovati caratteri a larghezza zero"
+  },
+  "join": {
+    "blankLinesAndTrailingSpaces": "Righe vuote e spazi finali",
+    "deleteBlankDescription": "Elimina le righe senza testo.",
+    "deleteBlankTitle": "Elimina righe vuote",
+    "deleteTrailingDescription": "Togli spazi e tabulazioni alla fine delle righe.",
+    "deleteTrailingTitle": "Togli spazi finali",
+    "description": "Unisci parti di testo con separatori personalizzabili.",
+    "inputTitle": "Parti di testo",
+    "joinCharacterDescription": "Simbolo che unisce le parti (predefinito: spazio).",
+    "joinCharacterPlaceholder": "Carattere di unione",
+    "resultTitle": "Testo unito",
+    "shortDescription": "Unisci parti di testo con un separatore",
+    "textMergedOptions": "Opzioni di unione",
+    "title": "Unisci testo",
+    "toolInfo": {
+      "description": "Questo strumento unisce parti di testo: prende una lista di valori, uno per riga, e li mette insieme con il carattere che scegli. Puoi anche ignorare le righe vuote e togliere spazi e tabulazioni a fine riga.",
+      "title": "Cos'è un unificatore di testo?"
+    }
+  },
+  "palindrome": {
+    "description": "Strumento semplicissimo per controllare se un testo è un palindromo, cioè se si legge uguale nei due sensi. Ideale per enigmi e giochi di parole. Supporta vari separatori e palindromi di più parole.",
+    "shortDescription": "Controlla se un testo si legge uguale nei due sensi",
+    "title": "Palindromo"
+  },
+  "passwordGenerator": {
+    "avoidAmbiguous": "Evita caratteri ambigui (i, I, l, 0, O)",
+    "description": "Genera password casuali sicure scegliendo lunghezza e tipi di carattere: minuscole, maiuscole, numeri e simboli. Puoi evitare i caratteri ambigui per una lettura più facile.",
+    "includeLowercase": "Includi minuscole (a-z)",
+    "includeNumbers": "Includi numeri (0-9)",
+    "includeSymbols": "Includi simboli",
+    "includeUppercase": "Includi maiuscole (A-Z)",
+    "lengthDesc": "Lunghezza della password (da 4 a 256)",
+    "lengthPlaceholder": "es. 12",
+    "optionsTitle": "Opzioni password",
+    "resultTitle": "Password generata",
+    "shortDescription": "Genera password casuali sicure",
+    "title": "Generatore di password",
+    "toolInfo": {
+      "description": "Questo strumento genera password casuali sicure in base ai criteri scelti: lunghezza, tipi di carattere e caratteri ambigui da evitare. Ideale per password robuste per account e applicazioni.",
+      "title": "Informazioni sul generatore di password"
+    }
+  },
+  "quote": {
+    "allowDoubleQuotation": "Consenti doppie virgolette",
+    "description": "Aggiungi virgolette attorno al testo con opzioni personalizzabili.",
+    "inputTitle": "Testo in ingresso",
+    "leftQuoteDescription": "Virgolette a sinistra",
+    "processAsMultiLine": "Elabora riga per riga",
+    "quoteEmptyLines": "Virgolette anche sulle righe vuote",
+    "quoteOptions": "Opzioni virgolette",
+    "resultTitle": "Testo tra virgolette",
+    "rightQuoteDescription": "Virgolette a destra",
+    "shortDescription": "Aggiungi virgolette attorno al testo",
+    "title": "Virgolette",
+    "toolInfo": {
+      "description": "Questo strumento aggiunge virgolette attorno al testo. Puoi scegliere i caratteri, gestire testi su più righe e decidere cosa fare con le righe vuote. Utile per programmazione, formattazione di dati o testo stilizzato.",
+      "title": "Virgolette"
+    }
+  },
+  "randomizeCase": {
+    "description": "Strumento semplicissimo per mescolare maiuscole e minuscole a caso in un testo. Ideale per effetti originali o per testare la distinzione tra maiuscole e minuscole.",
+    "shortDescription": "Maiuscole e minuscole a caso",
+    "title": "Maiuscole casuali"
+  },
+  "removeDuplicateLines": {
+    "description": "Inserisci il testo a sinistra e ottieni subito il testo senza righe duplicate. Veloce e gratuito.",
+    "shortDescription": "Elimina subito le righe ripetute",
+    "title": "Togli righe duplicate"
+  },
+  "repeat": {
+    "delimiterDescription": "Separatore tra le copie.",
+    "delimiterPlaceholder": "Separatore",
+    "description": "Ripeti un testo più volte con separatori personalizzabili.",
+    "inputTitle": "Testo in ingresso",
+    "numberPlaceholder": "Numero",
+    "repeatAmountDescription": "Numero di ripetizioni.",
+    "repetitionsDelimiter": "Separatore",
+    "resultTitle": "Testo ripetuto",
+    "shortDescription": "Ripeti un testo più volte",
+    "textRepetitions": "Ripetizioni",
+    "title": "Ripeti testo",
+    "toolInfo": {
+      "description": "Ripete un testo più volte, con un separatore facoltativo.",
+      "title": "Ripeti testo"
+    }
+  },
+  "reverse": {
+    "description": "Strumento semplicissimo per invertire un testo, carattere per carattere. Ideale per creare testo a specchio o giocare con le parole. Mantiene spazi e caratteri speciali.",
+    "inputTitle": "Testo da invertire",
+    "processMultiLine": "Elabora riga per riga",
+    "processMultiLineDescription": "Ogni riga viene invertita separatamente",
+    "resultTitle": "Testo invertito",
+    "reversalOptions": "Opzioni",
+    "shortDescription": "Inverti un testo carattere per carattere",
+    "skipEmptyLines": "Salta righe vuote",
+    "skipEmptyLinesDescription": "Le righe vuote vengono tolte dal risultato",
+    "title": "Inverti",
+    "trimWhitespace": "Togli spazi",
+    "trimWhitespaceDescription": "Togli gli spazi iniziali e finali di ogni riga"
+  },
+  "rot13": {
+    "description": "Codifica o decodifica testo con il cifrario ROT13.",
+    "inputTitle": "Testo in ingresso",
+    "resultTitle": "Risultato ROT13",
+    "shortDescription": "Codifica o decodifica testo con ROT13.",
+    "title": "Codifica/decodifica ROT13",
+    "toolInfo": {
+      "description": "ROT13 (rotazione di 13 posizioni) è un semplice cifrario che sostituisce ogni lettera con quella 13 posizioni più avanti nell'alfabeto. È un caso particolare del cifrario di Cesare. Con l'alfabeto inglese di 26 lettere, applicarlo due volte riporta il testo originale: la stessa operazione serve per codificare e decodificare.",
+      "title": "Cos'è ROT13?"
+    }
+  },
+  "rotate": {
+    "description": "Ruota i caratteri di un testo di un certo numero di posizioni.",
+    "inputTitle": "Testo in ingresso",
+    "processAsMultiLine": "Elabora riga per riga (ogni riga ruotata separatamente)",
+    "resultTitle": "Testo ruotato",
+    "rotateLeft": "Ruota a sinistra",
+    "rotateRight": "Ruota a destra",
+    "rotationOptions": "Opzioni di rotazione",
+    "shortDescription": "Sposta i caratteri del testo.",
+    "stepDescription": "Numero di posizioni",
+    "title": "Ruota testo",
+    "toolInfo": {
+      "description": "Questo strumento ruota i caratteri di un testo di un certo numero di posizioni, a sinistra o a destra, anche riga per riga. Utile per semplici trasformazioni, creare schemi o cifrature di base.",
+      "title": "Rotazione del testo"
+    }
+  },
+  "slugGenerator": {
+    "description": "Converti qualsiasi testo in uno slug adatto agli URL.",
+    "inputTitle": "Testo in ingresso",
+    "longDescription": "Converti qualsiasi testo in slug puliti e adatti agli URL. Gestisce spazi, caratteri speciali, lettere accentate e più righe insieme: comodo per trasformare titoli di articoli, nomi di prodotti o pagine in indirizzi leggibili e coerenti.",
+    "options": {
+      "caseDescription": "Mantieni maiuscole e minuscole originali invece di convertire tutto in minuscolo",
+      "caseLabel": "Mantieni maiuscole",
+      "title": "Opzioni slug"
+    },
+    "resultTitle": "Slug URL",
+    "shortDescription": "Genera slug per URL da un testo.",
+    "title": "Generatore di slug"
+  },
+  "split": {
+    "charAfterChunkDescription": "Carattere dopo ogni parte",
+    "charBeforeChunkDescription": "Carattere prima di ogni parte",
+    "chunksDescription": "Numero di parti di uguale lunghezza nel risultato.",
+    "chunksTitle": "Dividi in un numero di parti",
+    "description": "Strumento semplicissimo per dividere un testo in più parti usando un separatore. Ideale per elaborare dati o estrarre contenuti da testi lunghi.",
+    "lengthDescription": "Numero di caratteri in ogni parte.",
+    "lengthTitle": "Dividi per lunghezza",
+    "outputSeparatorDescription": "Carattere tra le parti divise (predefinito: a capo \"\\n\").",
+    "outputSeparatorOptions": "Separatore in uscita",
+    "regexDescription": "Espressione regolare per dividere il testo (predefinito: più spazi).",
+    "regexTitle": "Dividi con regex",
+    "resultTitle": "Risultato",
+    "shortDescription": "Dividi un testo in più parti con un separatore",
+    "splitSeparatorOptions": "Opzioni di divisione",
+    "symbolDescription": "Carattere per dividere il testo (predefinito: spazio).",
+    "symbolTitle": "Dividi con un simbolo",
+    "title": "Dividi"
+  },
+  "statistic": {
+    "characterFrequencyAnalysis": "Frequenza dei caratteri",
+    "characterFrequencyAnalysisDescription": "Conta quante volte compare ogni carattere",
+    "delimitersOptions": "Separatori",
+    "description": "Analizza un testo e ottieni statistiche complete.",
+    "includeEmptyLines": "Includi righe vuote",
+    "includeEmptyLinesDescription": "Conta anche le righe vuote",
+    "inputTitle": "Testo in ingresso",
+    "resultTitle": "Statistiche del testo",
+    "sentenceDelimitersDescription": "Caratteri che separano le frasi nella tua lingua (separati da virgola), o lascia vuoto per i predefiniti.",
+    "sentenceDelimitersPlaceholder": "es. ., !, ?, ...",
+    "shortDescription": "Ottieni statistiche sul tuo testo",
+    "statisticsOptions": "Opzioni statistiche",
+    "title": "Statistiche testo",
+    "toolInfo": {
+      "description": "Questo strumento analizza un testo e calcola statistiche complete: numero di caratteri, parole e righe, e frequenza di caratteri e parole.",
+      "title": "Cos'è {{title}}?"
+    },
+    "wordDelimitersDescription": "Regex personalizzata per contare le parole, o lascia vuoto per quella predefinita.",
+    "wordDelimitersPlaceholder": "es. \\s.,;:!?\"«»()…",
+    "wordFrequencyAnalysis": "Frequenza delle parole",
+    "wordFrequencyAnalysisDescription": "Conta quante volte compare ogni parola"
+  },
+  "tableTextConverter": {
+    "title": "Convertitore di tabelle",
+    "description": "Converti tabelle di testo tra Markdown, CSV, TSV, HTML, output MySQL e JSON.",
+    "shortDescription": "Converti tabelle tra Markdown, CSV, HTML, MySQL e JSON",
+    "longDescription": "Questo strumento converte tabelle di testo tra vari formati: tabelle Markdown, CSV, TSV, tabelle HTML, output di query MySQL/CLI e array JSON. Incolla la tabella in un formato supportato, scegli il formato di uscita (il formato di ingresso viene riconosciuto in automatico) e ottieni subito la tabella convertita. Utile per documentazione, fogli di calcolo o per rendere leggibili dati JSON.",
+    "inputTitle": "Tabella in ingresso",
+    "resultTitle": "Tabella convertita",
+    "options": "Opzioni di conversione",
+    "inputFormat": "Formato in ingresso",
+    "outputFormat": "Formato in uscita",
+    "autoDetect": "Riconosci formato in automatico (consigliato)",
+    "error": "Errore"
+  },
+  "textCompare": {
+    "description": "Confronta due testi ed evidenzia le differenze: aggiunte, eliminazioni e modifiche.",
+    "inputTitle": "Testo in ingresso",
+    "longDescription": "Questo strumento trova subito le differenze tra due versioni di un testo, evidenziando contenuti aggiunti, tolti e modificati. Ideale per rivedere modifiche o confrontare documenti. Puoi scegliere la precisione: per parola o per carattere.",
+    "options": {
+      "charLevel": "Per carattere",
+      "levelDesc": "Scegli quanto dettagliato deve essere il confronto: per parola evidenzia le parole cambiate, per carattere trova differenze più piccole.",
+      "title": "Impostazioni di confronto",
+      "wordLevel": "Per parola"
+    },
+    "resultTitle": "Differenze evidenziate",
+    "shortDescription": "Confronta due testi e trova subito le differenze",
+    "title": "Confronta testi"
+  },
+  "textReplacer": {
+    "description": "Sostituisci parti di testo con un nuovo contenuto.",
+    "findPatternInText": "Trova questo testo",
+    "findPatternUsingRegexp": "Trova con un'espressione regolare",
+    "inputTitle": "Testo da modificare",
+    "newTextPlaceholder": "Nuovo testo",
+    "regexpDescription": "Inserisci l'espressione regolare da sostituire.",
+    "replacePatternDescription": "Inserisci il testo sostitutivo.",
+    "replaceText": "Sostituisci con",
+    "resultTitle": "Testo con sostituzioni",
+    "searchPatternDescription": "Inserisci il testo da sostituire.",
+    "searchText": "Cerca",
+    "shortDescription": "Sostituisci subito parti di testo",
+    "title": "Trova e sostituisci",
+    "toolInfo": {
+      "description": "Sostituisci facilmente parti specifiche di un testo: inserisci il testo, indica cosa sostituire e con cosa, e ottieni subito la versione aggiornata.",
+      "title": "Trova e sostituisci"
+    }
+  },
+  "toMorse": {
+    "dashSymbolDescription": "Simbolo per la linea nel codice Morse.",
+    "description": "Converti un testo in codice Morse.",
+    "dotSymbolDescription": "Simbolo per il punto nel codice Morse.",
+    "longSignal": "Segnale lungo",
+    "resultTitle": "Codice Morse",
+    "shortDescription": "Converti subito un testo in Morse",
+    "shortSignal": "Segnale corto",
+    "title": "Testo in Morse"
+  },
+  "truncate": {
+    "addTruncationIndicator": "Aggiungi indicatore di taglio",
+    "charactersPlaceholder": "Caratteri",
+    "description": "Accorcia un testo alla lunghezza indicata.",
+    "indicatorDescription": "Caratteri da aggiungere alla fine (o all'inizio) del testo. Nota: contano nella lunghezza.",
+    "inputTitle": "Testo in ingresso",
+    "leftSideDescription": "Togli caratteri dall'inizio del testo.",
+    "leftSideTruncation": "Taglia a sinistra",
+    "lengthAndLines": "Lunghezza e righe",
+    "lineByLineDescription": "Accorcia ogni riga separatamente.",
+    "lineByLineTruncating": "Riga per riga",
+    "maxLengthDescription": "Numero di caratteri da tenere.",
+    "numberPlaceholder": "Numero",
+    "resultTitle": "Testo accorciato",
+    "rightSideDescription": "Togli caratteri dalla fine del testo.",
+    "rightSideTruncation": "Taglia a destra",
+    "shortDescription": "Accorcia un testo alla lunghezza indicata",
+    "suffixAndAffix": "Suffisso e prefisso",
+    "title": "Accorcia testo",
+    "toolInfo": {
+      "description": "Inserisci il testo a sinistra e ottieni subito il testo accorciato a destra.",
+      "title": "Accorcia testo"
+    },
+    "truncationSide": "Lato del taglio"
+  },
+  "unicode": {
+    "caseOptionsTitle": "Maiuscole/minuscole",
+    "decode": "Decodifica",
+    "description": "Converti un testo in sequenze di escape Unicode o decodificale in testo leggibile.",
+    "encode": "Codifica",
+    "inputTitle": "Ingresso",
+    "optionsTitle": "Modalità",
+    "resultTitle": "Risultato",
+    "shortDescription": "Codifica o decodifica testo con sequenze Unicode.",
+    "title": "Codifica/decodifica Unicode",
+    "toolInfo": {
+      "description": "Questo strumento converte un testo in sequenze di escape Unicode (es. \\uXXXX) e le decodifica di nuovo in testo normale. In codifica puoi scegliere se scrivere l'esadecimale in maiuscolo o minuscolo.",
+      "title": "Codifica/decodifica Unicode"
+    },
+    "uppercase": "Esadecimale maiuscolo"
+  },
+  "uppercase": {
+    "description": "Converti un testo in lettere maiuscole.",
+    "inputTitle": "Testo in ingresso",
+    "resultTitle": "Testo in maiuscolo",
+    "shortDescription": "Converti un testo in maiuscolo",
+    "title": "Tutto maiuscolo"
+  },
+  "urlDecode": {
+    "inputTitle": "Stringa in ingresso (codificata URL)",
+    "resultTitle": "Stringa risultante",
+    "toolInfo": {
+      "description": "Inserisci la stringa e verrà decodificata in automatico.",
+      "longDescription": "Questo strumento decodifica una stringa codificata per URL: è l'operazione inversa della codifica. Tutti i caratteri con il simbolo percentuale tornano leggibili. I più noti sono %20 per lo spazio, %3a per i due punti, %2f per la barra e %3f per il punto di domanda: le due cifre dopo il simbolo % sono il codice esadecimale del carattere.",
+      "shortDescription": "Decodifica subito una stringa URL.",
+      "title": "Decodifica URL"
+    }
+  },
+  "urlEditor": {
+    "addParameter": "Aggiungi parametro",
+    "credentialsNotSupported": "Gli URL con nome utente o password non sono supportati.",
+    "delete": "Elimina",
+    "deleteParamAriaLabel": "Elimina il parametro alla riga {{row}}",
+    "generatedUrl": "URL generato",
+    "hash": "Frammento",
+    "hashPlaceholder": "sezione",
+    "host": "Host",
+    "hostPlaceholder": "esempio.it",
+    "inputTitle": "Inserisci URL",
+    "invalidUrl": "URL non valido",
+    "key": "Chiave",
+    "noParameters": "Nessun parametro",
+    "paramKeyAriaLabel": "Chiave del parametro, riga {{row}}",
+    "paramValueAriaLabel": "Valore del parametro, riga {{row}}",
+    "parseButton": "Analizza URL",
+    "path": "Percorso",
+    "pathPlaceholder": "cerca",
+    "protocol": "Protocollo",
+    "queryParameters": "Parametri",
+    "toolInfo": {
+      "description": "Incolla un URL e tocca \"Analizza URL\" per vederne e modificarne le parti.",
+      "longDescription": "Questo strumento scompone un URL nelle sue parti e ti permette di modificare protocollo, host, percorso, frammento e parametri in modo visivo. Se cambi l'URL di partenza, tocca di nuovo \"Analizza URL\". Puoi aggiungere, togliere o modificare qualsiasi parte e copiare l'URL generato. Nessuna richiesta a server.",
+      "shortDescription": "Analizza e modifica le parti e i parametri di un URL.",
+      "title": "Editor URL"
+    },
+    "urlDetails": "Dettagli URL",
+    "value": "Valore"
+  },
+  "urlEncode": {
+    "encodingOption": {
+      "nonSpecialCharDescription": "Se attivo, tutti i caratteri vengono codificati (non solo quelli speciali).",
+      "nonSpecialCharPlaceholder": "Codifica anche i caratteri normali",
+      "title": "Opzioni di codifica"
+    },
+    "inputTitle": "Stringa in ingresso",
+    "resultTitle": "Stringa risultante",
+    "toolInfo": {
+      "description": "Inserisci la stringa e verrà codificata in automatico per URL.",
+      "longDescription": "Questo strumento codifica una stringa per gli URL: i caratteri speciali vengono convertiti nella codifica percentuale, cioè un simbolo % seguito da due cifre esadecimali. Ad esempio lo spazio diventa %20, i due punti %3a, la barra %2f. I caratteri normali restano invariati, a meno che tu non attivi l'opzione per codificarli tutti.",
+      "shortDescription": "Codifica subito una stringa per URL.",
+      "title": "Codifica URL"
+    }
+  },
+  "bcrypt": {
+    "title": "Bcrypt",
+    "inputTitle": "Stringa in ingresso",
+    "resultTitle": "Hash",
+    "shortDescription": "Calcola l'hash Bcrypt di una stringa",
+    "description": "Calcola in sicurezza l'hash di una stringa con l'algoritmo Bcrypt.",
+    "options": {
+      "title": "Opzioni",
+      "saltTitle": "Round di salt",
+      "saltDesc": "Numero di round di salt usati per l'hash."
+    },
+    "toolInfo": {
+      "title": "Cos'è Bcrypt?",
+      "longDescription": "Bcrypt è un algoritmo di hash pensato per proteggere password e altre stringhe sensibili. Il numero di round di salt determina quanto è costoso (e quindi sicuro) il calcolo."
+    }
+  }
+}

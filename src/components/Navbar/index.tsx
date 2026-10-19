@@ -5,9 +5,8 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from 'assets/logo.png';
-import logoWhite from 'assets/logo-white.png';
 import {
+  Box,
   Drawer,
   List,
   ListItem,
@@ -24,30 +23,23 @@ import { useTheme } from '@mui/material/styles';
 import { Icon } from '@iconify/react';
 import { Mode } from 'components/App';
 import { useTranslation } from 'react-i18next';
+import { useBt } from '../../benito/strings';
 
 interface NavbarProps {
   mode: Mode;
   onChangeMode: () => void;
 }
 const languages = [
-  { code: 'en', label: 'English' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'es', label: 'Español' },
-  { code: 'fr', label: 'Français' },
-  { code: 'pt', label: 'Português' },
-  { code: 'ja', label: '日本語' },
-  { code: 'hi', label: 'हिंदी' },
-  { code: 'nl', label: 'Nederlands' },
-  { code: 'ru', label: 'Русский' },
-  { code: 'uk', label: 'Українська' },
-  { code: 'zh', label: '中文' }
+  { code: 'it', label: 'Italiano' },
+  { code: 'en', label: 'English' }
 ];
 
 const Navbar: React.FC<NavbarProps> = ({
   mode,
   onChangeMode: onChangeMode
 }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
+  const bt = useBt();
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -114,41 +106,21 @@ const Navbar: React.FC<NavbarProps> = ({
       }
     />,
     <Icon
-      key="discord"
-      onClick={() => window.open('https://discord.gg/SDbbn3hT4b', '_blank')}
+      key="history"
+      onClick={() => navigate('/cronologia')}
       style={{ cursor: 'pointer' }}
-      fontSize={30}
-      icon={'ic:baseline-discord'}
+      fontSize={28}
+      icon={'material-symbols:history-rounded'}
+      aria-label={bt.history.title}
     />,
-    <iframe
-      key="github-star"
-      src="https://ghbtns.com/github-btn.html?user=iib0011&repo=omni-tools&type=star&count=true&size=large"
-      frameBorder="0"
-      scrolling="0"
-      width="150"
-      height="30"
-      title="GitHub"
-    ></iframe>,
-    <Button
-      key="translate"
-      onClick={() => {
-        window.open(
-          'https://www.locize.app/register?invitation=YOIH0Dyz3KHh3uQFCGYe9v1QOUoq8W5ySgmlwjX9cSypeJmt8F40brDtVbXb71fK',
-          '_blank'
-        );
-      }}
-      sx={{ borderRadius: '100px' }}
-      variant={'contained'}
-      startIcon={
-        <Icon
-          style={{ cursor: 'pointer' }}
-          fontSize={25}
-          icon={'ix:language-filled'}
-        />
-      }
-    >
-      {t('navbar.helpTranslate')}
-    </Button>
+    <Icon
+      key="settings"
+      onClick={() => navigate('/impostazioni')}
+      style={{ cursor: 'pointer' }}
+      fontSize={28}
+      icon={'material-symbols:settings-outline-rounded'}
+      aria-label={bt.settings.title}
+    />
   ];
   const drawerList = (
     <List>
@@ -184,11 +156,26 @@ const Navbar: React.FC<NavbarProps> = ({
         }}
       >
         <Stack direction="row" spacing={1.5} alignItems="center">
-          <Link to="/">
-            <img
-              src={theme.palette.mode === 'light' ? logo : logoWhite}
-              width={isMobile ? '120px' : '200px'}
-            />
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <Icon
+                icon="fluent-emoji-flat:toolbox"
+                fontSize={isMobile ? 32 : 40}
+              />
+              <Typography
+                component="span"
+                sx={{
+                  fontWeight: 800,
+                  fontSize: isMobile ? '1.3rem' : '1.7rem',
+                  letterSpacing: '-0.02em'
+                }}
+              >
+                Benito
+                <Box component="span" sx={{ color: 'primary.main' }}>
+                  Tools
+                </Box>
+              </Typography>
+            </Stack>
           </Link>
           <Typography
             component="span"
@@ -196,19 +183,11 @@ const Navbar: React.FC<NavbarProps> = ({
             sx={{
               color: 'text.secondary',
               fontWeight: 600,
-              whiteSpace: 'nowrap'
+              whiteSpace: 'nowrap',
+              display: { xs: 'none', sm: 'inline' }
             }}
           >
-            v{__APP_VERSION__} (
-            <a
-              href={`https://github.com/iib0011/omni-tools/tree/${__COMMIT_HASH__}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: 'inherit' }}
-            >
-              {__COMMIT_HASH__}
-            </a>
-            )
+            {__COMMIT_HASH__}
           </Typography>
         </Stack>
         {isMobile ? (

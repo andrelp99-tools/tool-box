@@ -1,0 +1,145 @@
+{
+  "comparison": {
+    "description": "Confronta due oggetti JSON per trovare differenze di struttura e valori.",
+    "shortDescription": "Trova le differenze tra due JSON",
+    "title": "Confronta JSON"
+  },
+  "escapeJson": {
+    "description": "Esegui l'escape dei caratteri speciali nelle stringhe JSON, per trasmetterle o salvarle in sicurezza.",
+    "inputTitle": "JSON in ingresso",
+    "longDescription": "L'escape del JSON converte i caratteri speciali in sequenze sicure, così il JSON può essere salvato, trasmesso o inserito in un altro JSON o in una stringa di codice. Lo strumento gestisce virgolette, barre rovesciate e a capo mantenendo la struttura dei dati. Utile per API, file di configurazione, database o codice sorgente.",
+    "resultTitle": "Stringa JSON con escape",
+    "shortDescription": "Escape dei caratteri speciali nel JSON",
+    "title": "Escape JSON",
+    "wrapOutputDescription": "Aggiungi le virgolette attorno al risultato per ottenere una stringa JSON.",
+    "wrapOutputTitle": "Racchiudi tra virgolette"
+  },
+  "jsonToCsv": {
+    "delimiterOption": "Separatore",
+    "description": "Converti dati JSON in CSV. Supporta oggetti e array annidati, rilevamento automatico delle intestazioni e separatori configurabili: pronto per Excel, Google Fogli o qualsiasi foglio di calcolo.",
+    "headerOption": "Intestazioni",
+    "inputTitle": "JSON in ingresso",
+    "options": {
+      "alwaysQuote": {
+        "description": "Racchiudi ogni cella tra virgolette, qualunque sia il contenuto.",
+        "label": "Sempre tra virgolette"
+      },
+      "autoQuote": {
+        "description": "Virgolette solo per le celle che contengono il separatore, virgolette o a capo. Risultato pulito e minimo.",
+        "label": "Automatico (consigliato)"
+      },
+      "delimiter": "Carattere che separa i valori in ogni riga (es. virgola, punto e virgola, tab)",
+      "header": {
+        "description": "Usa le chiavi JSON come nomi delle colonne nella prima riga. Consigliato per leggibilità e importazione.",
+        "label": "Includi riga di intestazione"
+      }
+    },
+    "outputTitle": "CSV risultante",
+    "quotingOption": "Virgolette",
+    "shortDescription": "Converti JSON in CSV",
+    "title": "JSON in CSV"
+  },
+  "jsonToXml": {
+    "description": "Converti dati JSON in XML. Trasforma oggetti JSON in documenti XML ben formati.",
+    "inputTitle": "JSON in ingresso",
+    "options": {
+      "addMetaTagDesc": "Aggiungi un meta tag all'inizio dell'XML",
+      "addMetaTagTitle": "Aggiungi meta tag XML",
+      "indentationTitle": "Rientro",
+      "metaInfoTitle": "Meta informazioni XML",
+      "noIdentDesc": "XML senza alcun rientro.",
+      "noIdentTitle": "Nessun rientro",
+      "useSpaceDesc": "Usa spazi per mostrare la struttura gerarchica dell'XML.",
+      "useSpaceTitle": "Rientro con spazi",
+      "useTabDesc": "Usa tabulazioni per mostrare la struttura gerarchica dell'XML.",
+      "useTabTitle": "Rientro con tabulazioni"
+    },
+    "outputTitle": "XML risultante",
+    "shortDescription": "Converti JSON in XML",
+    "title": "JSON in XML"
+  },
+  "minify": {
+    "description": "Togli dal JSON tutti gli spazi inutili.",
+    "inputTitle": "JSON in ingresso",
+    "resultTitle": "JSON minimizzato",
+    "shortDescription": "Minimizza il JSON togliendo gli spazi",
+    "title": "Minimizza JSON",
+    "toolInfo": {
+      "description": "Minimizzare un JSON significa togliere tutti gli spazi, a capo e rientri non necessari, mantenendolo valido. Il JSON diventa più leggero da salvare e trasmettere, con esattamente gli stessi dati e la stessa struttura.",
+      "title": "Cos'è la minimizzazione del JSON?"
+    }
+  },
+  "prettify": {
+    "description": "Formatta il JSON con rientri e spaziature corretti.",
+    "indentation": "Rientro",
+    "inputTitle": "JSON in ingresso",
+    "resultTitle": "JSON formattato",
+    "shortDescription": "Formatta e rendi leggibile il codice JSON",
+    "title": "Formatta JSON",
+    "toolInfo": {
+      "description": "Questo strumento formatta i dati JSON con rientri e spaziature corretti, rendendoli più leggibili e facili da usare.",
+      "title": "Formatta JSON"
+    },
+    "useSpaces": "Usa spazi",
+    "useSpacesDescription": "Rientro con spazi",
+    "useTabs": "Usa tabulazioni",
+    "useTabsDescription": "Rientro con tabulazioni."
+  },
+  "sortJson": {
+    "description": "Ordina i dati JSON: array di oggetti in base a una chiave, in ordine crescente o decrescente, oppure le chiavi di un oggetto in ordine alfabetico.",
+    "inputTitle": "JSON in ingresso",
+    "longDescription": "Questo strumento ordina i dati JSON in modo chiaro e prevedibile. Puoi ordinare un array di oggetti in base a qualsiasi chiave, in ordine crescente o decrescente: utile per liste di utenti, prodotti o record. In alternativa puoi ordinare alfabeticamente le chiavi di un oggetto per renderlo più leggibile. Gestisce le strutture JSON più comuni.",
+    "options": {
+      "ascending": "Crescente (A → Z)",
+      "descending": "Decrescente (Z → A)",
+      "keyDescription": "Scegli la chiave per l'ordinamento",
+      "modeDescription": "Scegli se ordinare gli elementi dell'array per valore di una chiave o le chiavi dell'oggetto in ordine alfabetico",
+      "orderDescription": "Scegli l'ordine",
+      "sortByKey": "Ordina le chiavi alfabeticamente",
+      "sortByValue": "Ordina l'array per valore di una chiave",
+      "title": "Opzioni di ordinamento"
+    },
+    "resultTitle": "JSON ordinato",
+    "shortDescription": "Ordina array JSON per valore o chiavi in ordine alfabetico",
+    "title": "Ordina JSON"
+  },
+  "stringify": {
+    "description": "Converti oggetti JavaScript in stringhe JSON, per salvarli o trasmetterli.",
+    "inputTitle": "Oggetto/array JavaScript",
+    "options": {
+      "escapeHtmlDesc": "Converti i caratteri speciali HTML nelle rispettive entità",
+      "escapeHtmlTitle": "Escape dei caratteri HTML",
+      "indentationTitle": "Rientro",
+      "optionsTitle": "Opzioni",
+      "useSpaceDesc": "Rientro con spazi",
+      "useSpaceTitle": "Usa spazi",
+      "useTabDesc": "Rientro con tabulazioni",
+      "useTabTitle": "Rientro con tabulazioni"
+    },
+    "resultTitle": "Stringa JSON",
+    "shortDescription": "Converti oggetti in stringa JSON",
+    "title": "Oggetto in JSON",
+    "toolInfo": {
+      "description": "Questo strumento converte oggetti e array JavaScript nella loro rappresentazione come stringa JSON, con rientro personalizzabile e l'opzione di fare l'escape dei caratteri HTML per usarla sul web. Utile per salvare o trasmettere dati, o per inserire JSON in una pagina HTML.",
+      "title": "Cos'è JSON Stringify?"
+    }
+  },
+  "tsvToJson": {
+    "description": "Converti dati TSV (valori separati da tabulazione) in JSON. Trasforma dati in tabella in oggetti JSON strutturati.",
+    "shortDescription": "Converti TSV in JSON",
+    "title": "TSV in JSON"
+  },
+  "validateJson": {
+    "description": "Controlla se il JSON è valido e ben formato.",
+    "inputTitle": "JSON in ingresso",
+    "invalidJson": "❌ {{error}}",
+    "resultTitle": "Risultato della verifica",
+    "shortDescription": "Controlla il codice JSON per trovare errori",
+    "title": "Valida JSON",
+    "toolInfo": {
+      "description": "JSON (JavaScript Object Notation) è un formato leggero per scambiare dati. La validazione verifica che i dati rispettino lo standard JSON. Un JSON valido deve avere: nomi delle proprietà tra virgolette doppie; parentesi graffe {} bilanciate; nessuna virgola dopo l'ultima coppia chiave-valore; oggetti e array annidati correttamente. Lo strumento controlla il JSON e ti aiuta a trovare e correggere gli errori più comuni.",
+      "title": "Cos'è la validazione JSON?"
+    },
+    "validJson": "✅ JSON valido"
+  }
+}

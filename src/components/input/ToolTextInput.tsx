@@ -1,9 +1,10 @@
 import { Box, TextField } from '@mui/material';
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import InputHeader from '../InputHeader';
 import InputFooter from './InputFooter';
 import { useTranslation } from 'react-i18next';
+import { takePendingText } from '../../benito/sharedFiles';
 
 export default function ToolTextInput({
   value,
@@ -17,6 +18,12 @@ export default function ToolTextInput({
   placeholder?: string;
 }) {
   const { t } = useTranslation();
+  // BenitoTools: testo arrivato da "Condividi con BenitoTools"
+  useEffect(() => {
+    const shared = takePendingText();
+    if (shared) onChange(shared);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const { showSnackBar } = useContext(CustomSnackBarContext);
   const fileInputRef = useRef<HTMLInputElement>(null);
 

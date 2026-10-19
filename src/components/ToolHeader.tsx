@@ -12,6 +12,7 @@ import IconButton from '@mui/material/IconButton';
 import { useTranslation } from 'react-i18next';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { validNamespaces } from '../i18n';
+import { useBt } from '../benito/strings';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: 'white',
@@ -31,6 +32,7 @@ interface ToolHeaderProps {
 
 function ToolLinks() {
   const { t } = useTranslation();
+  const bt = useBt();
   const [examplesVisible, setExamplesVisible] = useState(false);
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.down('md'));
@@ -62,7 +64,7 @@ function ToolLinks() {
             variant="outlined"
             onClick={() => scrollToElement('tool')}
           >
-            Use This Tool
+            {bt.common.useTool}
           </StyledButton>
         </Grid>
       )}
@@ -96,12 +98,13 @@ export default function ToolHeader({
 }: ToolHeaderProps) {
   const theme = useTheme();
   const { t } = useTranslation();
+  const bt = useBt();
   const [bookmarked, setBookmarked] = useState<boolean>(isBookmarked(path));
   return (
     <Box my={4}>
       <ToolBreadcrumb
         items={[
-          { title: 'All tools', link: '/' },
+          { title: bt.common.allTools, link: '/' },
           {
             title: getToolsByCategory([], t).find(
               (category) => category.type === type

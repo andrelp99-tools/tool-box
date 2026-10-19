@@ -13,6 +13,7 @@ import ScrollToTopButton from './ScrollToTopButton';
 import { I18nextProvider } from 'react-i18next';
 import i18n from '../i18n';
 import { UserTypeFilterProvider } from 'providers/UserTypeFilterProvider';
+import { THEME_EVENT } from '../benito/theme';
 
 export type Mode = 'dark' | 'light' | 'system';
 
@@ -30,6 +31,13 @@ function App() {
   );
   const [theme, setTheme] = useState<Theme>(() => getTheme(mode));
   useEffect(() => setTheme(getTheme(mode)), [mode]);
+
+  // BenitoTools: il tema può essere cambiato anche dalle Impostazioni
+  useEffect(() => {
+    const onTheme = (e: Event) => setMode((e as CustomEvent<Mode>).detail);
+    window.addEventListener(THEME_EVENT, onTheme);
+    return () => window.removeEventListener(THEME_EVENT, onTheme);
+  }, []);
 
   // Make sure to update the theme when the mode changes
   useEffect(() => {
@@ -59,7 +67,7 @@ function App() {
         >
           <CustomSnackBarProvider>
             <UserTypeFilterProvider>
-              <BrowserRouter>
+              <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
                 <Navbar
                   mode={mode}
                   onChangeMode={() => {

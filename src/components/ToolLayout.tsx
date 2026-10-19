@@ -1,5 +1,6 @@
 import { Box } from '@mui/material';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect } from 'react';
+import { setCurrentTool } from '../benito/currentTool';
 import { Helmet } from 'react-helmet';
 import ToolHeader from './ToolHeader';
 import Separator from './Separator';
@@ -42,6 +43,11 @@ export default function ToolLayout({
   //@ts-ignore
   const toolDescription: string = t(i18n.description);
 
+  // BenitoTools: ricorda lo strumento aperto (cronologia e "usati di recente")
+  useEffect(() => {
+    setCurrentTool(fullPath, toolTitle);
+  }, [fullPath, toolTitle]);
+
   const otherCategoryTools =
     getToolsByCategory([], t)
       .find((category) => category.type === type)
@@ -62,7 +68,7 @@ export default function ToolLayout({
       sx={{ backgroundColor: 'background.default' }}
     >
       <Helmet>
-        <title>{`${toolTitle} - OmniTools`}</title>
+        <title>{`${toolTitle} - BenitoTools`}</title>
       </Helmet>
       <Box width={'85%'}>
         <ToolHeader

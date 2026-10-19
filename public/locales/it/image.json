@@ -1,0 +1,392 @@
+{
+  "changeColors": {
+    "description": "Cambia colori specifici in un'immagine scegliendo un colore di partenza e sostituendolo con uno nuovo.",
+    "fromColor": {
+      "colorOption": "Sostituisci un colore specifico",
+      "selectorDescription": "Sostituisci questo colore",
+      "similarityDescription": "Includi questa % di colori simili. Ad esempio, il 10% di bianco include il bianco e un po' di grigio.",
+      "title": "Colore di partenza",
+      "transparentOption": "Sostituisci i pixel trasparenti"
+    },
+    "inputTitle": "Immagine in ingresso",
+    "resultTitle": "Immagine risultante",
+    "shortDescription": "Cambia subito i colori di un'immagine",
+    "title": "Cambia colori immagine",
+    "toColor": {
+      "colorOption": "Sostituisci con un colore specifico",
+      "selectorDescription": "Con questo colore",
+      "title": "Nuovo colore",
+      "transparentOption": "Sostituisci con trasparente"
+    }
+  },
+  "changeOpacity": {
+    "description": "Regola facilmente la trasparenza delle immagini. Carica l'immagine, usa il cursore per scegliere l'opacità tra 0 (trasparente) e 1 (opaca) e scarica il risultato.",
+    "shortDescription": "Regola la trasparenza delle immagini",
+    "title": "Cambia opacità immagine",
+    "inputTitle": "Immagine in ingresso",
+    "resultTitle": "Immagine elaborata",
+    "options": {
+      "opacitySettings": "Opacità",
+      "opacityDescription": "Opacità tra 0 (trasparente) e 1 (opaca)",
+      "solidOpacityTitle": "Opacità uniforme",
+      "solidOpacityDescription": "Stessa opacità per tutti i pixel",
+      "gradientOpacityTitle": "Opacità sfumata",
+      "gradientOpacityDescription": "Cambia l'opacità con una sfumatura",
+      "gradientType": "Tipo di sfumatura",
+      "linearOpacity": "Lineare",
+      "radialOpacity": "Radiale",
+      "opacityArea": "Area",
+      "leftPosition": "Posizione da sinistra",
+      "topPosition": "Posizione dall'alto",
+      "width": "Larghezza",
+      "height": "Altezza",
+      "backgroundOptions": "Sfondo",
+      "transparentAlpha": "Trasparente (alfa)",
+      "transparentAlphaDescription": "Mantieni la trasparenza (predefinito)",
+      "solidColor": "Colore pieno",
+      "solidColorDescription": "Metti l'immagine su uno sfondo a tinta unita",
+      "chooseBackgroundColor": "Scegli il colore di sfondo",
+      "insideOut": "Dall'interno all'esterno",
+      "outsideIn": "Dall'esterno all'interno",
+      "gradientDirection": "Direzione sfumatura"
+    }
+  },
+  "compress": {
+    "compressedSize": "Dimensione totale compressa",
+    "compressing": "Comprimo le immagini...",
+    "compressionOptions": "Opzioni di compressione",
+    "description": "Riduci il peso di una o più immagini mantenendo la qualità visiva. Carica più immagini e scaricale tutte insieme in un archivio ZIP.",
+    "failedToCompress": "Compressione non riuscita. Riprova.",
+    "fileSizes": "Dimensioni",
+    "inputTitle": "Immagini in ingresso",
+    "maxFileSizeDescription": "Dimensione massima per immagine in megabyte",
+    "originalSize": "Dimensione totale originale",
+    "qualityDescription": "Qualità in percentuale: valori più bassi = file più piccoli",
+    "resultTitle": "Immagini compresse",
+    "shortDescription": "Comprimi una o più immagini insieme.",
+    "someFailedToCompress": "Alcune immagini non sono state compresse e sono state saltate.",
+    "title": "Comprimi immagini"
+  },
+  "compressPng": {
+    "alreadyOptimized": "Questo PNG è già più piccolo di quanto potremmo ottenere, quindi è rimasto invariato.",
+    "alreadyOptimizedFiles": "Già più piccoli di quanto potremmo ottenere, lasciati invariati: {{files}}",
+    "colors": "Colori nella palette",
+    "compressedSize": "Dimensione compressa",
+    "compressing": "Comprimo il PNG...",
+    "compressionOptions": "Opzioni di compressione",
+    "description": "Comprime una o più immagini PNG senza ridimensionarle. Appena aggiungi i PNG, lo strumento riduce la palette di colori e li ricodifica mantenendo larghezza e altezza originali. Nelle opzioni puoi regolare il livello di compressione, impostare una dimensione massima e vedere il peso prima e dopo.",
+    "dimensions": "Dimensioni",
+    "dimensionsUnchanged": "(invariate)",
+    "dithering": "Retinatura (dithering)",
+    "ditheringDescription": "Distribuisce l'errore di colore sui pixel vicini per nascondere le bande nelle sfumature, ma il file è più grande",
+    "failed": "Impossibile comprimere il PNG. Riprova.",
+    "fileSizes": "Dimensioni",
+    "inputTitle": "PNG in ingresso",
+    "maxOutputSizeDescription": "Dimensione massima in kilobyte: la palette viene ridotta finché il PNG ci sta. 0 = nessun limite",
+    "noStatsYet": "Carica dei PNG per vedere quanto risparmi",
+    "originalSize": "Dimensione originale",
+    "qualityDescription": "Qualità in percentuale (1-100): valori più bassi tengono meno colori e danno file più piccoli",
+    "resultTitle": "PNG compressi",
+    "shortDescription": "Comprimi subito un PNG",
+    "someFailed": "Questi file non sono stati compressi: {{files}}",
+    "targetNotReached": "Non è stato possibile arrivare alla dimensione massima, nemmeno con la palette più piccola. L'immagine è stata compressa il più possibile.",
+    "targetNotReachedFiles": "Dimensione massima non raggiunta per: {{files}}. Sono stati compressi il più possibile.",
+    "title": "Comprimi PNG"
+  },
+  "convertJgpToPng": {
+    "description": "Converti subito le tue immagini JPG in PNG. Importa l'immagine nell'area a sinistra",
+    "shortDescription": "Converti subito JPG in PNG",
+    "title": "JPG in PNG"
+  },
+  "createTransparent": {
+    "description": "Crea una versione trasparente di un'immagine togliendo il colore di sfondo scelto.",
+    "shortDescription": "Rendi subito trasparente un'immagine",
+    "title": "Crea PNG trasparente"
+  },
+  "crop": {
+    "description": "Ritaglia le immagini per togliere le parti indesiderate.",
+    "inputTitle": "Immagine in ingresso",
+    "resultTitle": "Immagine ritagliata",
+    "shortDescription": "Ritaglia subito le immagini.",
+    "title": "Ritaglia immagine"
+  },
+  "editor": {
+    "description": "Editor di immagini avanzato: ritaglia, ruota, annota, regola i colori e aggiungi filigrane, direttamente nel browser.",
+    "shortDescription": "Modifica le immagini con strumenti avanzati",
+    "title": "Editor immagini"
+  },
+  "imageToText": {
+    "description": "Estrai il testo dalle immagini (JPG, PNG) con il riconoscimento ottico dei caratteri (OCR).",
+    "shortDescription": "Estrai il testo dalle immagini con l'OCR.",
+    "title": "Immagine in testo (OCR)"
+  },
+  "qrCode": {
+    "description": "Genera codici QR per vari tipi di dati: URL, testo, email, telefono, SMS, WiFi, contatto e altro.",
+    "groups": {
+      "details": {
+        "email": {
+          "address": {
+            "description": "Indirizzo email",
+            "placeholder": "esempio@esempio.it"
+          },
+          "body": {
+            "description": "Testo dell'email (facoltativo)",
+            "placeholder": "Testo"
+          },
+          "subject": {
+            "description": "Oggetto (facoltativo)",
+            "placeholder": "Oggetto"
+          }
+        },
+        "phone": {
+          "description": "Numero di telefono",
+          "placeholder": "+39 333 1234567"
+        },
+        "sms": {
+          "message": {
+            "description": "Messaggio (facoltativo)",
+            "placeholder": "Il tuo messaggio"
+          },
+          "number": {
+            "description": "Numero di telefono",
+            "placeholder": "+39 333 1234567"
+          }
+        },
+        "text": {
+          "description": "Inserisci il testo",
+          "placeholder": "Scrivi qui il testo"
+        },
+        "title": "Dettagli {{type}}",
+        "url": {
+          "description": "Inserisci l'URL",
+          "placeholder": "https://esempio.it"
+        },
+        "vcard": {
+          "address": {
+            "description": "Indirizzo",
+            "placeholder": "Via Roma 1, Città, Italia"
+          },
+          "company": {
+            "description": "Azienda (facoltativo)",
+            "placeholder": "Nome azienda"
+          },
+          "email": {
+            "description": "Email",
+            "placeholder": "mario@esempio.it"
+          },
+          "name": {
+            "description": "Nome completo",
+            "placeholder": "Mario Rossi"
+          },
+          "phone": {
+            "description": "Telefono",
+            "placeholder": "+39 333 1234567"
+          },
+          "title": {
+            "description": "Ruolo (facoltativo)",
+            "placeholder": "Data Scientist"
+          },
+          "website": {
+            "description": "Sito web (facoltativo)",
+            "placeholder": "https://esempio.it"
+          }
+        },
+        "wifi": {
+          "encryption": {
+            "label": "Tipo di protezione",
+            "options": {
+              "none": "Nessuna",
+              "wep": "WEP",
+              "wpa": "WPA"
+            }
+          },
+          "password": {
+            "description": "Password",
+            "placeholder": "Password"
+          },
+          "ssid": {
+            "description": "Nome della rete (SSID)",
+            "placeholder": "Nome rete"
+          }
+        }
+      },
+      "settings": {
+        "bgColor": "Colore di sfondo",
+        "correctionLevel": {
+          "helperText": "Livelli più alti resistono a più danni ma contengono meno dati",
+          "label": "Correzione errori",
+          "options": {
+            "h": "H (~30%)",
+            "l": "L (~7%)",
+            "m": "M (~15%)",
+            "q": "Q (~25%)"
+          }
+        },
+        "fgColor": "Colore del codice",
+        "size": {
+          "description": "Dimensione in pixel (100-1000)"
+        },
+        "title": "Impostazioni QR"
+      },
+      "type": {
+        "label": "Tipo di codice QR",
+        "options": {
+          "email": "Email",
+          "phone": "Telefono",
+          "sms": "SMS",
+          "text": "Testo",
+          "url": "URL",
+          "vcard": "vCard (contatto)",
+          "wifi": "WiFi"
+        },
+        "title": "Tipo di QR"
+      }
+    },
+    "longDescription": "Genera codici QR per vari tipi di dati: URL, testo, email, telefono, SMS, WiFi, contatto e altro. Personalizza dimensione e colori.",
+    "options": {
+      "address": "Indirizzo",
+      "company": "Azienda (facoltativo)",
+      "email": "Email",
+      "emailBody": "Testo dell'email (facoltativo)",
+      "emailSubject": "Oggetto (facoltativo)",
+      "encryptionType": "Tipo di protezione",
+      "fullName": "Nome completo",
+      "job": "Ruolo (facoltativo)",
+      "message": "Messaggio (facoltativo)",
+      "name": "Nome",
+      "password": "Password",
+      "phone": "Numero di telefono",
+      "qrType": "Tipo di codice QR",
+      "size": "Dimensione in pixel (100-1000)",
+      "ssid": "Nome della rete (SSID)",
+      "text": "Inserisci il testo",
+      "url": "Inserisci l'URL",
+      "website": "Sito web (facoltativo)"
+    },
+    "result": {
+      "title": "Codice QR generato"
+    },
+    "resultOutput": "Codice QR generato",
+    "shortDescription": "Crea codici QR personalizzati per vari tipi di dati.",
+    "title": "Generatore QR"
+  },
+  "removeBackground": {
+    "description": "Togli lo sfondo da un'immagine per isolare il soggetto principale su trasparente.",
+    "shortDescription": "Togli in automatico lo sfondo dalle immagini",
+    "title": "Rimuovi sfondo"
+  },
+  "resize": {
+    "description": "Ridimensiona le immagini in pixel o in percentuale. Mantieni le proporzioni e imposta larghezza o altezza con calcolo automatico. Scarica i risultati uno per uno o in un archivio ZIP.",
+    "dimensionType": "Tipo di dimensione",
+    "heightDescription": "Altezza (in pixel)",
+    "inputTitle": "Immagini in ingresso",
+    "maintainAspectRatio": "Mantieni le proporzioni",
+    "maintainAspectRatioDescription": "Mantieni le proporzioni originali dell'immagine.",
+    "percentage": "Percentuale",
+    "percentageDescription": "Percentuale della dimensione originale (es. 50 per la metà, 200 per il doppio)",
+    "resizeByPercentage": "Ridimensiona in percentuale",
+    "resizeByPercentageDescription": "Indica una percentuale della dimensione originale.",
+    "resizeByPixels": "Ridimensiona in pixel",
+    "resizeByPixelsDescription": "Indica le dimensioni in pixel.",
+    "resizeMethod": "Metodo",
+    "resultTitle": "Immagini ridimensionate",
+    "setHeight": "Imposta altezza",
+    "setHeightDescription": "Indica l'altezza in pixel; la larghezza si calcola dalle proporzioni.",
+    "setWidth": "Imposta larghezza",
+    "setWidthDescription": "Indica la larghezza in pixel; l'altezza si calcola dalle proporzioni.",
+    "shortDescription": "Ridimensiona una o più immagini insieme.",
+    "title": "Ridimensiona immagine",
+    "toolInfo": {
+      "description": "Questo strumento ridimensiona una o più immagini JPG, PNG, SVG o GIF insieme, in pixel o in percentuale, mantenendo se vuoi le proporzioni. Con più immagini, i risultati vengono raccolti in un file ZIP.",
+      "title": "Ridimensiona immagini"
+    },
+    "widthDescription": "Larghezza (in pixel)"
+  },
+  "rotate": {
+    "description": "Ruota un'immagine dell'angolo indicato.",
+    "inputTitle": "Immagini in ingresso",
+    "options": {
+      "angle": "Angolo",
+      "customDesc": "Ruota di un angolo a scelta in gradi.",
+      "customTitle": "Angolo personalizzato",
+      "method": "Metodo di rotazione",
+      "presetDesc": "Ruota di un angolo predefinito in gradi.",
+      "presetTitle": "Angolo predefinito"
+    },
+    "resultTitle": "Immagini ruotate",
+    "shortDescription": "Ruota facilmente un'immagine.",
+    "title": "Ruota immagine"
+  },
+  "split": {
+    "description": "Dividi una mappa o un'immagine grande in pagine del formato carta scelto, con margini. Indica i pixel per quadretto di stampa e il numero di quadretti per scalare correttamente l'immagine.",
+    "inputTitle": "Immagine in ingresso",
+    "loadingText": "Elaborazione... potrebbe volerci un momento.",
+    "pageParameters": {
+      "padding": {
+        "description": "Margine attorno alla mappa in ogni pagina (nelle unità scelte)",
+        "label": "Margine"
+      },
+      "selectPageFormat": "Formato pagina",
+      "title": "Pagina"
+    },
+    "resultTitle": "PDF diviso",
+    "scaleParameters": {
+      "pxPerSquareQuantity": {
+        "description": "Quanti pixel corrispondono al numero di quadretti indicato sull'immagine originale (in orizzontale o verticale)",
+        "label": "Pixel per quadretti"
+      },
+      "squareQuantity": {
+        "description": "Numero di quadretti in larghezza (o altezza) usati per la scala",
+        "label": "Numero di quadretti"
+      },
+      "title": "Scala",
+      "unitsPerOneSquare": {
+        "description": "Dimensione fisica di un quadretto nelle unità scelte",
+        "label": "Unità per quadretto"
+      }
+    },
+    "shortDescription": "Dividi un'immagine grande in più pagine (PDF).",
+    "title": "Dividi immagine in pagine",
+    "units": {
+      "options": {
+        "in": "Pollici (in)",
+        "mm": "Millimetri (mm)",
+        "pt": "Punti (pt)"
+      },
+      "select": "Unità di misura",
+      "title": "Unità"
+    }
+  },
+  "watermark": {
+    "description": "Aggiungi una filigrana di testo a una o più immagini, usando il nome del file o un testo a scelta.",
+    "failedToProcess": "Filigrana non applicata a una o più immagini. Riprova.",
+    "inputTitle": "Immagini in ingresso",
+    "options": {
+      "color": "Colore della filigrana.",
+      "customStringWatermarkDesc": "Stesso testo su tutte le immagini.",
+      "customStringWatermarkTitle": "Testo personalizzato",
+      "filenameWatermarkDesc": "Usa il nome di ogni file come filigrana.",
+      "filenameWatermarkTitle": "Usa il nome del file",
+      "fontSize": "Dimensione del testo.",
+      "opacity": "Trasparenza della filigrana.",
+      "position": {
+        "bottomLeft": "In basso a sinistra",
+        "bottomRight": "In basso a destra",
+        "center": "Al centro",
+        "topLeft": "In alto a sinistra",
+        "topRight": "In alto a destra"
+      },
+      "positionTitle": "Posizione",
+      "styleTitle": "Stile",
+      "watermark": "Testo della filigrana.",
+      "watermarkTitle": "Testo"
+    },
+    "outputTitle": "Immagini con filigrana",
+    "shortDescription": "Aggiungi filigrane di testo alle immagini",
+    "title": "Filigrana immagini",
+    "toolInfo": {
+      "longDescription": "Aggiunge filigrane di testo personalizzabili a una o più immagini: puoi usare il nome di ogni file o lo stesso testo per tutte. Le filigrane proteggono il tuo lavoro, indicano chi è l'autore e aiutano a organizzare le raccolte. Puoi scegliere dimensione, opacità, colore e posizione mantenendo la qualità originale.",
+      "title": "Cos'è la filigrana per immagini?"
+    }
+  }
+}

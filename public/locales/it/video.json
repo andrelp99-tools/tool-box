@@ -1,0 +1,181 @@
+{
+  "addAudio": {
+    "audioFile": "File audio",
+    "audioInputTitle": "Audio in ingresso",
+    "description": "Aggiungi una traccia audio a qualsiasi video. Puoi sostituire l'audio originale o mescolare la nuova traccia con quella esistente. Regola il volume, il loop e taglia l'audio con inizio e fine precisi. Supporta tutti i formati video e audio più comuni.",
+    "durationMode": "Intervallo di tempo",
+    "endTime": "Fine",
+    "endTimeDesc": "Quando finisce il nuovo audio (HH:MM:SS.mm).",
+    "loadingText": "Aggiungo l'audio al video...",
+    "loop": "Loop (ripeti l'audio fino alla fine del video o alla fine indicata)",
+    "loopOption": "Opzioni loop",
+    "mode": "Modalità audio",
+    "modeMix": "Mescola (originale + nuovo)",
+    "modeReplace": "Sostituisci l'audio originale",
+    "noLoop": "Nessun loop (audio una sola volta)",
+    "resultTitle": "Video elaborato",
+    "shortDescription": "Aggiungi o sostituisci l'audio di un video",
+    "startTime": "Inizio",
+    "startTimeDesc": "Quando inizia il nuovo audio (HH:MM:SS.mm).",
+    "timing": "Tempi dell'audio",
+    "timingDefault": "Predefinito (tutto il video)",
+    "timingEnd": "Imposta fine",
+    "timingModeDesc": "Scegli quando suona il nuovo audio nel video.",
+    "timingStart": "Imposta inizio",
+    "timingStartEnd": "Imposta inizio e fine",
+    "title": "Aggiungi audio al video",
+    "videoInputTitle": "Video in ingresso",
+    "volume": "Volume del nuovo audio",
+    "volumeDesc": "Livello di volume della nuova traccia."
+  },
+  "changeSpeed": {
+    "description": "Cambia la velocità di riproduzione dei video. Accelera o rallenta mantenendo l'audio sincronizzato. Supporta vari moltiplicatori e i formati video più comuni.",
+    "inputTitle": "Video in ingresso",
+    "options": "Opzioni",
+    "resultTitle": "Video modificato",
+    "shortDescription": "Cambia la velocità di un video",
+    "speedLabel": "Velocità: x",
+    "title": "Cambia velocità video",
+    "toolInfo": {
+      "longDescription": "{{title}} regola la velocità dei tuoi video direttamente nel browser. Accelera per effetti veloci o rallenta per il rallentatore, con audio sempre sincronizzato. Scegli un moltiplicatore tra 0,25x e 4x, senza installare nulla. Supporta i formati più comuni e mantiene il più possibile la qualità originale.",
+      "title": "Cos'è {{title}}?"
+    }
+  },
+  "compress": {
+    "default": "Predefinita",
+    "description": "Comprimi i video riducendoli a risoluzioni come 240p, 480p, 720p ecc. Riduce le dimensioni mantenendo una qualità accettabile. Supporta MP4, WebM e OGG.",
+    "inputTitle": "Video in ingresso",
+    "loadingText": "Comprimo il video...",
+    "lossless": "Senza perdita",
+    "quality": "Qualità (CRF)",
+    "resolution": "Risoluzione",
+    "resultTitle": "Video compresso",
+    "shortDescription": "Comprimi i video riducendo la risoluzione",
+    "title": "Comprimi video",
+    "worst": "Minima"
+  },
+  "cropVideo": {
+    "cropCoordinates": "Coordinate di ritaglio",
+    "croppingVideo": "Ritaglio il video",
+    "description": "Ritaglia il video per togliere le parti indesiderate.",
+    "errorBeyondHeight": "L'area di ritaglio supera l'altezza del video ({{height}}px)",
+    "errorBeyondWidth": "L'area di ritaglio supera la larghezza del video ({{width}}px)",
+    "errorCroppingVideo": "Errore nel ritaglio. Controlla i parametri e il file video.",
+    "errorLoadingDimensions": "Impossibile leggere le dimensioni del video",
+    "errorNonNegativeCoordinates": "Le coordinate X e Y non possono essere negative",
+    "errorPositiveDimensions": "Larghezza e altezza devono essere positive",
+    "height": "Altezza",
+    "inputTitle": "Video in ingresso",
+    "loadVideoForDimensions": "Carica un video per vederne le dimensioni",
+    "longDescription": "Questo strumento ritaglia i video per togliere le parti indesiderate o concentrarsi su una zona. Utile per eliminare bande nere, cambiare proporzioni o mettere in evidenza il contenuto. Supporta MP4, MOV, AVI e altri formati.",
+    "resultTitle": "Video ritagliato",
+    "shortDescription": "Ritaglia il video per togliere le parti indesiderate",
+    "title": "Ritaglia video",
+    "toolInfo": {
+      "description": "Questo strumento ritaglia i video. Indica l'area con le coordinate X, Y e con larghezza e altezza.",
+      "title": "Ritaglia video"
+    },
+    "videoDimensions": "Dimensioni video: {{width}} × {{height}} pixel",
+    "videoInformation": "Informazioni video",
+    "width": "Larghezza",
+    "xCoordinate": "X (sinistra)",
+    "yCoordinate": "Y (alto)"
+  },
+  "flip": {
+    "description": "Capovolgi i video in orizzontale o verticale. Specchia per effetti speciali o per correggere l'orientamento.",
+    "horizontalLabel": "Orizzontale (specchio)",
+    "inputTitle": "Video in ingresso",
+    "orientation": "Orientamento",
+    "resultTitle": "Video capovolto",
+    "shortDescription": "Capovolgi un video in orizzontale o verticale",
+    "title": "Capovolgi video",
+    "verticalLabel": "Verticale (sottosopra)"
+  },
+  "gif": {
+    "changeSpeed": {
+      "description": "Cambia la velocità delle GIF animate. Accelera o rallenta mantenendo l'animazione fluida.",
+      "inputTitle": "GIF in ingresso",
+      "options": {
+        "speedLabel": "Velocità: x",
+        "title": "Opzioni"
+      },
+      "resultTitle": "GIF risultante",
+      "shortDescription": "Cambia la velocità di una GIF",
+      "title": "Cambia velocità GIF"
+    },
+    "imagesToGif": {
+      "title": "Immagini in GIF",
+      "description": "Crea GIF animate da più immagini. Ordina i fotogrammi, regola i tempi e ottieni un'animazione fluida in pochi tocchi.",
+      "shortDescription": "Trasforma più immagini in una GIF animata",
+      "inputTitle": "Immagini in ingresso",
+      "resultTitle": "GIF animata",
+      "loadingText": "Creo la GIF...",
+      "frameOptions": "Opzioni fotogrammi",
+      "frameDelayDescription": "Quanto resta visibile ogni fotogramma, in millisecondi (es. 500 = 0,5 s)",
+      "frameRateDescription": "Velocità dell'animazione in fotogrammi al secondo (FPS)",
+      "frameRateValueDescription": "Imposta il valore",
+      "frameDelay": "Durata fotogramma",
+      "frameRate": "Fotogrammi al secondo (FPS)"
+    }
+  },
+  "loop": {
+    "description": "Crea un video in loop ripetendo l'originale più volte.",
+    "inputTitle": "Video in ingresso",
+    "loops": "Ripetizioni",
+    "numberOfLoops": "Numero di ripetizioni",
+    "resultTitle": "Video in loop",
+    "shortDescription": "Crea video in loop",
+    "title": "Video in loop",
+    "toolInfo": {
+      "description": "Questo strumento crea un video in loop ripetendo l'originale più volte. Puoi scegliere quante volte ripeterlo.",
+      "title": "Cos'è {{title}}?"
+    }
+  },
+  "mergeVideo": {
+    "description": "Unisci più video in un unico video continuo.",
+    "inputTitle": "Video in ingresso",
+    "longDescription": "Questo strumento unisce più video in un unico video continuo. Carica i video, mettili nell'ordine che vuoi e uniscili in un solo file da condividere o modificare.",
+    "resultTitle": "Video unito",
+    "shortDescription": "Unisci video facilmente.",
+    "title": "Unisci video"
+  },
+  "resize": {
+    "customDimensions": "Dimensioni personalizzate",
+    "customMode": "Dimensioni personalizzate",
+    "customModeDesc": "Imposta tu larghezza e altezza",
+    "description": "Ridimensiona i video a 240p, 360p, 480p, 720p e 1080p, oppure a larghezza e altezza personalizzate. Per evitare deformazioni le proporzioni vengono mantenute. Supporta MP4, WebM e OGG.",
+    "height": "Altezza (pixel)",
+    "inputTitle": "Video in ingresso",
+    "loadingText": "Ridimensiono il video...",
+    "maintainAspectRatio": "Mantieni le proporzioni",
+    "mode": "Modalità",
+    "presetMode": "Risoluzione standard",
+    "presetModeDesc": "Scegli tra le risoluzioni video standard",
+    "resolution": "Risoluzione",
+    "resultTitle": "Video ridimensionato",
+    "shortDescription": "Ridimensiona i video a diverse risoluzioni",
+    "title": "Ridimensiona video",
+    "width": "Larghezza (pixel)"
+  },
+  "rotate": {
+    "180Degrees": "180° (capovolto)",
+    "270Degrees": "270° (90° antiorario)",
+    "90Degrees": "90° orario",
+    "description": "Ruota i video di 90, 180 o 270 gradi. Correggi l'orientamento o crea effetti speciali.",
+    "inputTitle": "Video in ingresso",
+    "resultTitle": "Video ruotato",
+    "rotation": "Rotazione",
+    "shortDescription": "Ruota un video dei gradi indicati",
+    "title": "Ruota video"
+  },
+  "trim": {
+    "description": "Taglia i video indicando inizio e fine. Togli le parti indesiderate all'inizio o alla fine.",
+    "endTime": "Fine",
+    "inputTitle": "Video in ingresso",
+    "resultTitle": "Video tagliato",
+    "shortDescription": "Taglia un video togliendo le parti indesiderate",
+    "startTime": "Inizio",
+    "timestamps": "Tempi",
+    "title": "Taglia video"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "audio": {
+    "changeSpeed": {
+      "description": "Cambia la velocità di riproduzione dei file audio. Accelera o rallenta l'audio mantenendo l'intonazione.",
+      "name": "Cambia velocità audio",
+      "shortDescription": "Cambia la velocità dei file audio"
+    },
+    "extractAudio": {
+      "description": "Estrai la traccia audio da un video e salvala come file audio separato nel formato che preferisci (AAC, MP3, WAV).",
+      "name": "Estrai audio",
+      "shortDescription": "Estrai l'audio dai video (MP4, MOV, ecc.) in AAC, MP3 o WAV."
+    }
+  },
+  "baseFileInput": {
+    "copyFailed": "Copia non riuscita: {{error}}",
+    "dropFileHere": "Rilascia qui il tuo file ({{type}})",
+    "fileCopied": "File copiato",
+    "selectFileDescription": "Tocca qui per scegliere un file ({{type}}) dal dispositivo, premi Ctrl+V per incollarlo dagli appunti o trascinalo qui"
+  },
+  "categories": {
+    "audio": {
+      "description": "Strumenti per l'audio: estrai l'audio dai video, cambia la velocità, unisci più file audio e molto altro.",
+      "title": "Audio"
+    },
+    "converters": {
+      "description": "Strumenti per convertire dati tra formati diversi: immagini, audio, video, testo e altro.",
+      "title": "Convertitori"
+    },
+    "csv": {
+      "description": "Strumenti per i file CSV: converti in altri formati, modifica i dati, controlla la struttura ed elabora i CSV in modo efficiente.",
+      "title": "CSV"
+    },
+    "gif": {
+      "description": "Strumenti per le GIF animate: rendi trasparenti, estrai fotogrammi, aggiungi testo, ritaglia, ruota, inverti e molto altro.",
+      "title": "GIF"
+    },
+    "image-generic": {
+      "description": "Strumenti per le immagini: comprimi, ridimensiona, ritaglia, converti in JPG, ruota, rimuovi lo sfondo e molto altro.",
+      "title": "Immagini"
+    },
+    "json": {
+      "description": "Strumenti per i dati JSON: formatta e minimizza, appiattisci array, converti in stringa, analizza i dati e molto altro.",
+      "title": "JSON"
+    },
+    "list": {
+      "description": "Strumenti per le liste: ordina, inverti, mescola, trova elementi unici e duplicati, cambia i separatori e molto altro.",
+      "title": "Liste"
+    },
+    "number": {
+      "description": "Strumenti per i numeri: genera sequenze, converti numeri in parole e viceversa, ordina, arrotonda, scomponi e molto altro.",
+      "title": "Numeri"
+    },
+    "pdf": {
+      "description": "Strumenti per i PDF: estrai il testo, converti in altri formati, modifica i PDF e molto altro.",
+      "title": "PDF"
+    },
+    "png": {
+      "description": "Strumenti per le immagini PNG: converti in JPG, rendi trasparenti, cambia colori, ritaglia, ruota, ridimensiona e molto altro.",
+      "title": "PNG"
+    },
+    "seeAll": "Vedi tutti: {{title}}",
+    "string": {
+      "description": "Strumenti per il testo: converti testo in immagine, trova e sostituisci, dividi in parti, unisci righe, ripeti testo e molto altro.",
+      "title": "Testo"
+    },
+    "time": {
+      "description": "Strumenti per date e orari: calcola differenze, converti fusi orari, formatta date, genera sequenze di date e molto altro.",
+      "title": "Date e orari"
+    },
+    "try": "Prova {{title}}",
+    "video": {
+      "description": "Strumenti per i video: estrai fotogrammi, crea GIF dai video, taglia, ruota, cambia velocità e molto altro.",
+      "title": "Video"
+    },
+    "xml": {
+      "description": "Strumenti per i dati XML: visualizza, formatta, valida e molto altro",
+      "title": "XML"
+    }
+  },
+  "converters": {
+    "audioconverter": {
+      "description": "Converti file audio tra formati diversi.",
+      "longDescription": "Questo strumento converte i file audio da un formato all'altro, con supporto a molti formati audio.",
+      "shortDescription": "Converti file audio in vari formati.",
+      "title": "Convertitore audio"
+    }
+  },
+  "csv": {
+    "findIncompleteCsvRecords": {
+      "description": "Carica il tuo file CSV qui sotto e lo strumento controllerà in automatico che nessuna riga o colonna abbia valori mancanti. Nelle opzioni puoi impostare il formato del file (separatore, carattere di citazione e di commento). Puoi anche attivare il controllo dei valori vuoti, saltare le righe vuote e limitare il numero di messaggi di errore.",
+      "name": "Trova record CSV incompleti",
+      "shortDescription": "Trova subito righe e colonne del CSV con valori mancanti."
+    }
+  },
+  "hero": {
+    "brand": "BenitoTools",
+    "description": "Tutti i tuoi strumenti per file, testo e dati in un'unica app. Tutto funziona nel browser: i tuoi file non lasciano mai il dispositivo.",
+    "examples": {
+      "calculateNumberSum": "Somma numeri",
+      "changeGifSpeed": "Cambia velocità GIF",
+      "compressPng": "Comprimi PNG",
+      "createTransparentImage": "Crea immagine trasparente",
+      "prettifyJson": "Formatta JSON",
+      "sortList": "Ordina una lista",
+      "splitPdf": "Dividi PDF",
+      "splitText": "Dividi un testo",
+      "trimVideo": "Taglia video"
+    },
+    "search": {
+      "noResult": "Nessun risultato, prova a cambiare la ricerca o i filtri",
+      "placeholder": "Cerca tra tutti gli strumenti"
+    },
+    "title": "Fai tutto in fretta con"
+  },
+  "inputFooter": {
+    "clear": "Svuota",
+    "copyToClipboard": "Copia negli appunti",
+    "importFromFile": "Scegli file"
+  },
+  "list": {
+    "group": {
+      "description": "Strumento semplicissimo per raggruppare gli elementi di una lista. Inserisci la lista e scegli il criterio per organizzarla in gruppi. Ideale per classificare dati e creare liste strutturate. Supporta separatori personalizzati e varie opzioni di raggruppamento.",
+      "name": "Raggruppa",
+      "shortDescription": "Raggruppa gli elementi di una lista per proprietà comuni"
+    },
+    "reverse": {
+      "description": "Strumento semplicissimo che stampa gli elementi di una lista in ordine inverso. Gli elementi possono essere separati da qualsiasi simbolo e puoi cambiare il separatore del risultato.",
+      "name": "Inverti",
+      "shortDescription": "Inverti subito una lista"
+    },
+    "sort": {
+      "description": "Strumento semplicissimo che ordina gli elementi di una lista in ordine crescente o decrescente: alfabetico, numerico o per lunghezza. Puoi rimuovere duplicati ed elementi vuoti e togliere gli spazi attorno agli elementi. Puoi separare gli elementi con qualsiasi carattere o con un'espressione regolare, e scegliere un nuovo separatore per il risultato.",
+      "name": "Ordina",
+      "shortDescription": "Ordina subito una lista"
+    }
+  },
+  "navbar": {
+    "buyMeACoffee": "Offrimi un caffè",
+    "helpTranslate": "Aiuta a tradurre",
+    "home": "Home",
+    "tools": "Strumenti"
+  },
+  "number": {
+    "generate": {
+      "description": "Genera subito una lista di numeri interi nel browser. Indica il primo numero, l'incremento e quanti numeri vuoi nelle opzioni qui sotto.",
+      "name": "Genera numeri",
+      "shortDescription": "Genera una lista di numeri interi"
+    },
+    "sum": {
+      "description": "Strumento semplicissimo che somma numeri. I numeri possono essere separati da qualsiasi simbolo e puoi cambiare il separatore.",
+      "name": "Somma numeri",
+      "shortDescription": "Somma subito una lista di numeri"
+    }
+  },
+  "numericInputWithUnit": {
+    "unit": "Unità"
+  },
+  "pdf": {
+    "compressPdf": {
+      "description": "Riduci le dimensioni del PDF mantenendo la qualità, con Ghostscript",
+      "name": "Comprimi PDF",
+      "shortDescription": "Comprimi i PDF in sicurezza nel browser"
+    },
+    "mergePdf": {
+      "description": "Unisci più file PDF in un unico documento.",
+      "name": "Unisci PDF",
+      "shortDescription": "Unisci più PDF in un unico documento"
+    },
+    "pdfToEpub": {
+      "description": "Trasforma i PDF in file EPUB per leggerli meglio sugli e-reader.",
+      "name": "PDF in EPUB",
+      "shortDescription": "Converti PDF in formato EPUB"
+    },
+    "protectPdf": {
+      "description": "Proteggi i tuoi PDF con una password, in sicurezza nel browser",
+      "name": "Proteggi PDF",
+      "shortDescription": "Proteggi i PDF con password"
+    },
+    "splitPdf": {
+      "description": "Estrai pagine specifiche da un PDF usando numeri o intervalli (es. 1,5-8)",
+      "name": "Dividi PDF",
+      "shortDescription": "Estrai pagine specifiche da un PDF"
+    }
+  },
+  "resultFooter": {
+    "copy": "Copia negli appunti",
+    "download": "Scarica"
+  },
+  "string": {
+    "createPalindrome": {
+      "description": "Strumento semplicissimo per creare palindromi da qualsiasi testo. Inserisci un testo e trasformalo subito in un palindromo che si legge uguale nei due sensi. Ideale per giochi di parole e curiosità linguistiche.",
+      "name": "Crea palindromo",
+      "shortDescription": "Crea un testo che si legge uguale nei due sensi"
+    },
+    "palindrome": {
+      "description": "Strumento semplicissimo per controllare se un testo è un palindromo, cioè se si legge uguale nei due sensi. Ideale per enigmi e giochi di parole. Supporta vari separatori e palindromi di più parole.",
+      "name": "Palindromo",
+      "shortDescription": "Controlla se un testo si legge uguale nei due sensi"
+    },
+    "repeat": {
+      "description": "Ripete un testo più volte, con un separatore facoltativo.",
+      "name": "Ripeti testo",
+      "shortDescription": "Ripeti un testo più volte"
+    },
+    "reverse": {
+      "description": "Strumento semplicissimo per invertire un testo, carattere per carattere. Ideale per creare testo a specchio o giocare con le parole. Mantiene spazi e caratteri speciali.",
+      "name": "Inverti",
+      "shortDescription": "Inverti un testo carattere per carattere"
+    },
+    "toMorse": {
+      "description": "Strumento semplicissimo per convertire un testo in codice Morse. Scrivi il testo a sinistra e ottieni subito il codice Morse nel risultato.",
+      "name": "Testo in Morse",
+      "shortDescription": "Converti subito un testo in Morse"
+    },
+    "uppercase": {
+      "description": "Strumento semplicissimo per convertire un testo in maiuscolo. Ideale per titoli, enfasi o per uniformare il testo. Mantiene i caratteri speciali.",
+      "name": "Maiuscolo",
+      "shortDescription": "Converti un testo in lettere maiuscole"
+    }
+  },
+  "toolExamples": {
+    "subtitle": "Tocca per provare!",
+    "title": "Esempi: {{title}}"
+  },
+  "toolFileResult": {
+    "copied": "File copiato",
+    "copyFailed": "Copia non riuscita: {{error}}",
+    "loading": "Elaborazione... potrebbe volerci un momento.",
+    "result": "Risultato"
+  },
+  "toolHeader": {
+    "seeExamples": "Vedi esempi"
+  },
+  "toolLayout": {
+    "allToolsTitle": "Tutti: {{type}}"
+  },
+  "toolMultiFileResult": {
+    "copied": "File copiato",
+    "copyFailed": "Copia non riuscita: {{error}}",
+    "loading": "Elaborazione... potrebbe volerci un momento.",
+    "result": "Risultato"
+  },
+  "toolMultipleInput": {
+    "deleteFile": "Elimina file",
+    "dropFilesHere": "Rilascia qui i tuoi file",
+    "inputTitle": "File in ingresso ({{type}})",
+    "invalidFileType": "Tipo di file non valido. Scegli file di un tipo supportato.",
+    "noFilesSelected": "Nessun file selezionato",
+    "selectFilesDescription": "Tocca qui per scegliere i file dal dispositivo o trascinali qui"
+  },
+  "toolOptions": {
+    "title": "Opzioni"
+  },
+  "toolTextInput": {
+    "copied": "Testo copiato",
+    "copyFailed": "Copia non riuscita: {{error}}",
+    "input": "Testo in ingresso",
+    "placeholder": "Scrivi qui il tuo testo..."
+  },
+  "toolTextResult": {
+    "copied": "Testo copiato",
+    "copyFailed": "Copia non riuscita: {{error}}",
+    "loading": "Elaborazione... potrebbe volerci un momento.",
+    "result": "Risultato"
+  },
+  "userTypes": {
+    "developers": "Sviluppatori",
+    "generalUsers": "Uso quotidiano"
+  }
+}

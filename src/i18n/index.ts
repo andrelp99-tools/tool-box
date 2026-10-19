@@ -29,25 +29,16 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: [
-      'en',
-      'de',
-      'es',
-      'fr',
-      'pt',
-      'ja',
-      'hi',
-      'nl',
-      'ru',
-      'uk',
-      'zh'
-    ],
+    // BenitoTools: solo italiano e inglese
+    supportedLngs: ['it', 'en'],
+    // BenitoTools: italiano predefinito, inglese come riserva
+    lng: localStorage.getItem('lang') || 'it',
     fallbackLng: 'en',
     interpolation: {
       escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
     },
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json'
+      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`
     },
     detection: {
       lookupLocalStorage: 'lang',

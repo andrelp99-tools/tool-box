@@ -4,6 +4,7 @@ import Categories from './Categories';
 import { Helmet } from 'react-helmet';
 import { useUserTypeFilter } from 'providers/UserTypeFilterProvider';
 import UserTypeFilter from '@components/UserTypeFilter';
+import RecentTools from '../../benito/RecentTools';
 
 export default function Home() {
   const theme = useTheme();
@@ -16,7 +17,7 @@ export default function Home() {
         lg: 5
       }}
       sx={{
-        background: `url(/assets/${
+        background: `url(${import.meta.env.BASE_URL}assets/${
           theme.palette.mode === 'dark'
             ? 'background-dark.png'
             : 'background.svg'
@@ -29,8 +30,9 @@ export default function Home() {
       justifyContent={'center'}
       width={'100%'}
     >
-      <Helmet title={'OmniTools'} />
+      <Helmet title={'BenitoTools'} />
       <Hero />
+      <RecentTools />
       <Box my={3}>
         <UserTypeFilter
           selectedUserTypes={selectedUserTypes}

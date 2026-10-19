@@ -1,0 +1,57 @@
+{
+  "audioConverter": {
+    "description": "Converti file audio tra formati diversi.",
+    "inputTitle": "Audio in ingresso",
+    "longDescription": "Questo strumento converte i file audio da un formato all'altro, con supporto a molti formati audio.",
+    "outputFormat": "Formato di uscita",
+    "outputFormatDescription": "Scegli il formato audio di uscita",
+    "outputTitle": "Audio convertito",
+    "shortDescription": "Converti file audio in vari formati.",
+    "title": "Convertitore audio"
+  },
+  "convertToJPG": {
+    "description": "Converti immagini di vari formati in JPG, scegliendo qualità e colore di sfondo.",
+    "failedToConvert": "Conversione in JPG non riuscita. Riprova.",
+    "inputTitle": "Immagini in ingresso",
+    "options": {
+      "colorDescription": "Colore di sfondo (per immagini trasparenti)",
+      "quality": "Qualità:",
+      "qualityDescription": "Valori più alti = qualità migliore, file più grande",
+      "title": "Impostazioni di conversione"
+    },
+    "resultTitle": "Immagini JPG",
+    "shortDescription": "Converti immagini in JPG scegliendo la qualità",
+    "title": "Converti immagini in JPG"
+  },
+  "convertToWebp": {
+    "description": "Converti immagini di vari formati in WebP, scegliendo qualità e colore di sfondo.",
+    "failedToConvert": "Conversione in WebP non riuscita. Riprova.",
+    "inputTitle": "Immagini in ingresso",
+    "options": {
+      "colorDescription": "Colore di sfondo (per immagini trasparenti)",
+      "quality": "Qualità:",
+      "qualityDescription": "Valori più alti = qualità migliore, file più grande",
+      "title": "Impostazioni di conversione"
+    },
+    "resultTitle": "Immagini WebP",
+    "shortDescription": "Converti immagini in WebP scegliendo la qualità.",
+    "title": "Converti immagini in WebP"
+  },
+  "videoToGif": {
+    "description": "Converti video in GIF animate. Scegli il pezzo di video e crea immagini animate da condividere.",
+    "inputTitle": "Video in ingresso",
+    "options": {
+      "endTime": "Fine",
+      "high": "Alta",
+      "low": "Bassa",
+      "mid": "Media",
+      "quality": "Qualità",
+      "startTime": "Inizio",
+      "timestamps": "Tempi",
+      "ultra": "Massima"
+    },
+    "resultTitle": "GIF risultante",
+    "shortDescription": "Converti video in GIF animata",
+    "title": "Video in GIF"
+  }
+}

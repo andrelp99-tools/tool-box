@@ -1,4 +1,5 @@
-import { useContext, useRef, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
+import { takePendingFiles } from '../benito/sharedFiles';
 import { useTranslation } from 'react-i18next';
 import { CustomSnackBarContext } from '../contexts/CustomSnackBarContext';
 
@@ -52,6 +53,13 @@ export default function useFileDrop({ accept, onFiles }: UseFileDropOptions) {
     }
     if (accepted.length > 0) await onFiles(accepted);
   };
+
+  // BenitoTools: file arrivati da "Condividi con" o dalla cronologia
+  useEffect(() => {
+    const pending = takePendingFiles(accept);
+    if (pending.length > 0) addFiles(pending);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const dropHandlers = {
     onDragEnter: (event: React.DragEvent<HTMLElement>) => {

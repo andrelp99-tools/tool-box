@@ -6,6 +6,7 @@ import { globalInputHeight } from '../../config/uiConfig';
 import ResultFooter from './ResultFooter';
 import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import { useTranslation } from 'react-i18next';
+import { addToHistory } from '../../benito/history';
 
 export default function ToolFileResult({
   title = 'Result',
@@ -75,6 +76,7 @@ export default function ToolFileResult({
       a.click();
       document.body.removeChild(a);
       window.URL.revokeObjectURL(url);
+      addToHistory(value, filename); // BenitoTools
     }
   };
 
@@ -163,8 +165,7 @@ export default function ToolFileResult({
               )}
               {fileType === 'unknown' && (
                 <Box sx={{ padding: 2, textAlign: 'center' }}>
-                  File processed successfully. Click download to save the
-                  result.
+                  {value?.name}
                 </Box>
               )}
             </Box>
@@ -175,6 +176,7 @@ export default function ToolFileResult({
         disabled={!value}
         handleCopy={handleCopy}
         handleDownload={handleDownload}
+        files={value ? [value] : undefined}
         hideCopy={
           fileType === 'video' || fileType === 'audio' || fileType === 'pdf'
         }

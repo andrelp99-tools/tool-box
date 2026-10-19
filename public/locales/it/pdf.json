@@ -1,0 +1,139 @@
+{
+  "compressPdf": {
+    "compressedFileSize": "Dimensione compressa",
+    "compressingPdf": "Comprimo il PDF...",
+    "compressionLevel": "Livello di compressione",
+    "compressionSettings": "Impostazioni di compressione",
+    "description": "Riduci le dimensioni del PDF mantenendo la qualità, con Ghostscript",
+    "errorCompressingPdf": "Compressione non riuscita: {{error}}",
+    "errorReadingPdf": "Impossibile leggere il PDF. Controlla che sia un PDF valido.",
+    "fileSize": "Dimensione originale",
+    "highCompression": "Compressione alta",
+    "highCompressionDescription": "Massima riduzione, con un po' di perdita di qualità",
+    "inputTitle": "PDF in ingresso",
+    "longDescription": "Comprimi i PDF in sicurezza nel browser con Ghostscript. I file non lasciano mai il dispositivo: privacy completa e file più leggeri da mandare via email, caricare sui siti o archiviare. Funziona con WebAssembly.",
+    "lowCompression": "Compressione bassa",
+    "lowCompressionDescription": "Riduzione leggera, qualità quasi invariata",
+    "mediumCompression": "Compressione media",
+    "mediumCompressionDescription": "Equilibrio tra dimensione e qualità",
+    "pages": "Numero di pagine",
+    "resultTitle": "PDF compresso",
+    "shortDescription": "Comprimi i PDF in sicurezza nel browser",
+    "title": "Comprimi PDF"
+  },
+  "convertToPdf": {
+    "description": "Converti immagini (PNG, GIF, JPG, WEBP, HEIC, HEIF) in PDF, scegliendo scala e orientamento della pagina.",
+    "inputTitle": "Immagini in ingresso",
+    "options": {
+      "a4": "Pagina A4",
+      "fullsize": "Dimensione reale (come l'immagine)",
+      "image": "Immagine",
+      "landscape": "Orizzontale",
+      "orientation": "Orientamento",
+      "portrait": "Verticale",
+      "scale": "Scala",
+      "type": "Tipo di PDF"
+    },
+    "resultTitle": "PDF risultante",
+    "shortDescription": "Converti immagini in PDF scegliendo scala e orientamento",
+    "title": "Immagini in PDF"
+  },
+  "editor": {
+    "description": "Editor PDF avanzato: annotazioni, compilazione moduli, evidenziatore ed esportazione. Modifica i PDF nel browser inserendo testo, disegnando, evidenziando, firmando e compilando moduli.",
+    "shortDescription": "Modifica PDF con annotazioni, firma e strumenti di modifica",
+    "title": "Editor PDF"
+  },
+  "extractImagesFromPdf": {
+    "description": "Estrai tutte le immagini contenute nel PDF, nella qualità originale.",
+    "inputTitle": "PDF in ingresso",
+    "longDescription": "Carica un PDF per estrarre in automatico tutte le immagini contenute. La qualità originale viene mantenuta, con supporto a JPG, PNG e altri formati. Ideale per recuperare illustrazioni, foto, pagine scansionate o grafiche dai PDF.",
+    "resultTitle": "Immagini estratte",
+    "shortDescription": "Estrai le immagini da un PDF.",
+    "title": "Estrai immagini da PDF"
+  },
+  "merge": {
+    "inputTitle": "PDF in ingresso",
+    "loadingText": "Estraggo le pagine",
+    "resultTitle": "PDF unito",
+    "toolInfo": {
+      "description": "Questo strumento unisce più PDF in un unico documento. Carica i PDF da unire: tutte le pagine verranno messe insieme in un solo PDF.",
+      "title": "Come si usa Unisci PDF?"
+    }
+  },
+  "mergePdf": {
+    "description": "Unisci più file PDF in un unico documento.",
+    "inputTitle": "PDF in ingresso",
+    "mergingPdfs": "Unisco i PDF",
+    "pdfOptions": "Opzioni PDF",
+    "resultTitle": "PDF unito",
+    "shortDescription": "Unisci più PDF in un unico documento",
+    "sortByFileName": "Ordina per nome",
+    "sortByFileNameDescription": "Ordina i PDF alfabeticamente per nome file",
+    "sortByUploadOrder": "Ordine di caricamento",
+    "sortByUploadOrderDescription": "Mantieni i PDF nell'ordine in cui li hai caricati",
+    "title": "Unisci PDF",
+    "toolInfo": {
+      "description": "Questo strumento unisce più PDF in un unico documento. Puoi scegliere come ordinarli e verranno uniti in quell'ordine.",
+      "title": "Unisci file PDF"
+    }
+  },
+  "pdfToEpub": {
+    "description": "Trasforma i PDF in file EPUB per leggerli meglio sugli e-reader.",
+    "shortDescription": "Converti PDF in formato EPUB",
+    "title": "PDF in EPUB"
+  },
+  "pdfToPng": {
+    "description": "Trasforma le pagine di un PDF in immagini PNG.",
+    "longDescription": "Carica un PDF e converti ogni pagina in un'immagine PNG di alta qualità, direttamente nel browser. Ideale per estrarre contenuti visivi o condividere singole pagine. Nessun dato viene caricato: tutto avviene sul dispositivo.",
+    "shortDescription": "Converti PDF in immagini PNG",
+    "title": "PDF in PNG"
+  },
+  "protectPdf": {
+    "description": "Proteggi i tuoi PDF con una password, in sicurezza nel browser",
+    "shortDescription": "Proteggi i PDF con password",
+    "title": "Proteggi PDF"
+  },
+  "rotatePdf": {
+    "allPagesWillBeRotated": "Verranno ruotate tutte le {{count}} pagine",
+    "angleOptions": {
+      "clockwise90": "90° orario",
+      "counterClockwise270": "270° (90° antiorario)",
+      "upsideDown180": "180° (capovolto)"
+    },
+    "applyToAllPages": "Applica a tutte le pagine",
+    "description": "Ruota le pagine di un PDF.",
+    "inputTitle": "PDF in ingresso",
+    "longDescription": "Cambia l'orientamento delle pagine ruotandole di 90, 180 o 270 gradi. Utile per correggere scansioni storte o preparare i PDF per la stampa.",
+    "pageRangesDescription": "Inserisci numeri di pagina o intervalli separati da virgole (es. 1,3,5-7)",
+    "pageRangesPlaceholder": "es. 1,5-8",
+    "pagesWillBeRotated": "Pagine da ruotare: {{count}}",
+    "pdfPageCount": "Pagine nel PDF: {{count}}",
+    "resultTitle": "PDF ruotato",
+    "rotatingPages": "Ruoto le pagine",
+    "rotationAngle": "Angolo di rotazione",
+    "rotationSettings": "Impostazioni di rotazione",
+    "shortDescription": "Ruota le pagine di un PDF",
+    "title": "Ruota PDF",
+    "toolInfo": {
+      "description": "Questo strumento ruota le pagine di un PDF. Puoi ruotarle tutte o solo alcune. Scegli l'angolo: 90° orario, 180° (capovolto) o 270° (90° antiorario). Per ruotare pagine specifiche togli la spunta a \"Applica a tutte le pagine\" e inserisci numeri o intervalli separati da virgole (es. 1,3,5-7).",
+      "title": "Come si usa Ruota PDF"
+    }
+  },
+  "splitPdf": {
+    "description": "Estrai pagine specifiche da un PDF.",
+    "extractingPages": "Estraggo le pagine",
+    "inputTitle": "PDF in ingresso",
+    "pageExtractionPreview": "Pagine da estrarre: {{count}}",
+    "pageRangesDescription": "Inserisci numeri di pagina o intervalli separati da virgole (es. 1,3,5-7)",
+    "pageRangesPlaceholder": "es. 1,5-8",
+    "pageSelection": "Scelta pagine",
+    "pdfPageCount": "Pagine nel PDF: {{count}}",
+    "resultTitle": "PDF estratto",
+    "shortDescription": "Estrai pagine specifiche da un PDF",
+    "title": "Dividi PDF",
+    "toolInfo": {
+      "description": "Questo strumento estrae pagine specifiche da un PDF. Puoi indicare singole pagine o intervalli.",
+      "title": "Dividi PDF"
+    }
+  }
+}

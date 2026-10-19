@@ -13,6 +13,7 @@ import { CustomSnackBarContext } from '../../contexts/CustomSnackBarContext';
 import greyPattern from '@assets/grey-pattern.png';
 import { isArray } from 'lodash';
 import { useTranslation } from 'react-i18next';
+import { takePendingFiles } from '../../benito/sharedFiles';
 
 interface BaseFileInputComponentProps extends BaseFileInputProps {
   children: (props: { preview: string | undefined }) => ReactNode;
@@ -33,6 +34,13 @@ export default function BaseFileInput({
   const theme = useTheme();
   const fileInputRef = React.useRef<HTMLInputElement>(null);
   const { showSnackBar } = useContext(CustomSnackBarContext);
+
+  // BenitoTools: file arrivato da "Condividi con" o dalla cronologia
+  useEffect(() => {
+    const files = takePendingFiles(accept);
+    if (files.length > 0) onChange(files[0]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (value) {
@@ -91,7 +99,7 @@ export default function BaseFileInput({
         onChange(file);
       } else {
         showSnackBar(
-          `Invalid file type. Please use ${accept.join(', ')}`,
+          t('toolMultipleInput.invalidFileType'),
           'error'
         );
       }

@@ -1,0 +1,258 @@
+{
+  "chunk": {
+    "deleteEmptyItems": "Elimina elementi vuoti",
+    "deleteEmptyItemsDescription": "Ignora gli elementi vuoti ed escludili dal risultato.",
+    "description": "Dividi una lista in gruppi consecutivi di dimensione fissa. Separa gli elementi, li raggruppa in ordine, può completare l'ultimo gruppo e formatta il risultato con separatori e contorni personalizzati.",
+    "emptyItemsAndPadding": "Elementi vuoti e riempimento",
+    "groupNumberDescription": "Elementi per gruppo",
+    "groupSeparatorDescription": "Separatore tra i gruppi",
+    "groupSizeAndSeparators": "Dimensione gruppi e formato",
+    "inputItemSeparator": "Separatore degli elementi",
+    "inputTitle": "Lista in ingresso",
+    "itemSeparatorDescription": "Separatore tra gli elementi di un gruppo",
+    "leftWrapDescription": "Simbolo prima di ogni gruppo",
+    "padNonFullGroups": "Completa i gruppi incompleti",
+    "padNonFullGroupsDescription": "Riempi l'ultimo gruppo se ha meno elementi del previsto.",
+    "paddingCharDescription": "Carattere o valore usato per completare i gruppi.",
+    "resultTitle": "Lista a gruppi",
+    "rightWrapDescription": "Simbolo dopo ogni gruppo",
+    "shortDescription": "Dividi una lista in gruppi di dimensione fissa",
+    "splitOperators": {
+      "regex": {
+        "description": "Separa gli elementi con un'espressione regolare.",
+        "title": "Separa con regex"
+      },
+      "symbol": {
+        "description": "Separa gli elementi con un carattere.",
+        "title": "Separa con simbolo"
+      }
+    },
+    "splitSeparatorDescription": "Simbolo o espressione regolare che separa gli elementi.",
+    "title": "Dividi in gruppi"
+  },
+  "duplicate": {
+    "concatenate": "Concatena",
+    "concatenateDescription": "Metti le copie una dopo l'altra (se disattivo, gli elementi vengono alternati)",
+    "copyDescription": "Numero di copie (anche decimale)",
+    "description": "Strumento semplicissimo per duplicare gli elementi di una lista. Inserisci la lista e scegli come creare le copie. Ideale per espandere dati, fare test o creare schemi ripetuti.",
+    "duplicationOptions": "Opzioni di duplicazione",
+    "error": "Errore",
+    "example1Description": "Questo esempio mostra come duplicare una lista di parole.",
+    "example1Title": "Duplicazione semplice",
+    "example2Description": "Questo esempio mostra come duplicare una lista in ordine inverso.",
+    "example2Title": "Duplicazione inversa",
+    "example3Description": "Questo esempio mostra come alternare gli elementi invece di concatenarli.",
+    "example3Title": "Elementi alternati",
+    "example4Description": "Questo esempio mostra come duplicare una lista con un numero decimale di copie.",
+    "example4Title": "Duplicazione decimale",
+    "examples": {
+      "fractional": {
+        "description": "Questo esempio mostra come duplicare una lista con un numero decimale di copie.",
+        "title": "Duplicazione decimale"
+      },
+      "interweave": {
+        "description": "Questo esempio mostra come alternare gli elementi invece di concatenarli.",
+        "title": "Elementi alternati"
+      },
+      "reverse": {
+        "description": "Questo esempio mostra come duplicare una lista in ordine inverso.",
+        "title": "Duplicazione inversa"
+      },
+      "simple": {
+        "description": "Questo esempio mostra come duplicare una lista di parole.",
+        "title": "Duplicazione semplice"
+      }
+    },
+    "inputTitle": "Lista in ingresso",
+    "joinSeparatorDescription": "Separatore per unire la lista duplicata",
+    "resultTitle": "Lista duplicata",
+    "reverse": "Inverti",
+    "reverseDescription": "Inverti gli elementi duplicati",
+    "shortDescription": "Duplica gli elementi di una lista",
+    "splitByRegex": "Separa con espressione regolare",
+    "splitBySymbol": "Separa con simbolo",
+    "splitOptions": "Opzioni di separazione",
+    "splitSeparatorDescription": "Separatore per dividere la lista",
+    "title": "Duplica",
+    "toolInfo": {
+      "description": "Questo strumento duplica gli elementi di una lista. Puoi scegliere il numero di copie (anche decimale), se concatenarle o alternarle e se invertirle. Utile per creare schemi ripetuti, dati di test o liste più lunghe.",
+      "title": "Duplicazione di liste"
+    },
+    "unknownError": "Si è verificato un errore sconosciuto",
+    "validation": {
+      "copyMustBeNumber": "Il numero di copie deve essere un numero",
+      "copyMustBePositive": "Il numero di copie deve essere positivo",
+      "copyRequired": "Il numero di copie è obbligatorio",
+      "joinSeparatorRequired": "Il separatore di unione è obbligatorio",
+      "separatorRequired": "Il separatore è obbligatorio"
+    }
+  },
+  "findMostPopular": {
+    "description": "Strumento semplicissimo per trovare gli elementi più frequenti di una lista. Ideale per analizzare dati, individuare tendenze o trovare elementi comuni.",
+    "displayFormatDescription": "Come mostrare gli elementi più frequenti?",
+    "displayOptions": {
+      "count": "Mostra il conteggio",
+      "percentage": "Mostra la percentuale",
+      "total": "Mostra il totale"
+    },
+    "extractListItems": "Come leggere gli elementi?",
+    "ignoreItemCase": "Ignora maiuscole/minuscole",
+    "ignoreItemCaseDescription": "Confronta tutti gli elementi in minuscolo.",
+    "inputTitle": "Lista in ingresso",
+    "itemComparison": "Confronto elementi",
+    "outputFormat": "Formato del risultato",
+    "removeEmptyItems": "Togli elementi vuoti",
+    "removeEmptyItemsDescription": "Ignora gli elementi vuoti nel confronto.",
+    "resultTitle": "Elementi più frequenti",
+    "shortDescription": "Trova gli elementi che compaiono più spesso",
+    "sortOptions": {
+      "alphabetic": "Ordine alfabetico",
+      "count": "Ordina per conteggio"
+    },
+    "sortingMethodDescription": "Scegli come ordinare.",
+    "splitOperators": {
+      "regex": {
+        "description": "Separa gli elementi con un'espressione regolare.",
+        "title": "Separa con regex"
+      },
+      "symbol": {
+        "description": "Separa gli elementi con un carattere.",
+        "title": "Separa con simbolo"
+      }
+    },
+    "splitSeparatorDescription": "Simbolo o espressione regolare di separazione.",
+    "title": "Più frequenti",
+    "trimItems": "Togli spazi",
+    "trimItemsDescription": "Togli gli spazi iniziali e finali prima del confronto"
+  },
+  "findUnique": {
+    "caseSensitiveItems": "Distingui maiuscole/minuscole",
+    "caseSensitiveItemsDescription": "Elementi con maiuscole diverse sono considerati diversi.",
+    "delimiterDescription": "Simbolo o espressione regolare di separazione.",
+    "description": "Strumento semplicissimo per trovare gli elementi unici di una lista, togliendo i duplicati. Ideale per pulire dati o trovare valori distinti.",
+    "findAbsolutelyUniqueItems": "Solo elementi mai ripetuti",
+    "findAbsolutelyUniqueItemsDescription": "Mostra solo gli elementi presenti una sola volta.",
+    "inputListDelimiter": "Separatore in ingresso",
+    "inputTitle": "Lista in ingresso",
+    "outputListDelimiter": "Separatore in uscita",
+    "resultTitle": "Elementi unici",
+    "shortDescription": "Trova gli elementi unici di una lista",
+    "skipEmptyItems": "Salta elementi vuoti",
+    "skipEmptyItemsDescription": "Non includere gli elementi vuoti nel risultato.",
+    "title": "Elementi unici",
+    "trimItems": "Togli spazi",
+    "trimItemsDescription": "Togli gli spazi iniziali e finali prima del confronto.",
+    "uniqueItemOptions": "Opzioni elementi unici"
+  },
+  "reverse": {
+    "description": "Strumento semplicissimo che stampa gli elementi di una lista in ordine inverso. Gli elementi possono essere separati da qualsiasi simbolo e puoi cambiare il separatore del risultato.",
+    "inputTitle": "Lista in ingresso",
+    "itemSeparator": "Separatore degli elementi",
+    "itemSeparatorDescription": "Simbolo o espressione regolare di separazione.",
+    "outputListOptions": "Opzioni di uscita",
+    "outputSeparatorDescription": "Separatore degli elementi nel risultato.",
+    "resultTitle": "Lista invertita",
+    "shortDescription": "Inverti subito una lista",
+    "splitOperators": {
+      "regex": {
+        "description": "Separa gli elementi con un'espressione regolare.",
+        "title": "Separa con regex"
+      },
+      "symbol": {
+        "description": "Separa gli elementi con un carattere.",
+        "title": "Separa con simbolo"
+      }
+    },
+    "splitterMode": "Modalità di separazione",
+    "title": "Inverti",
+    "toolInfo": {
+      "description": "Questo strumento inverte l'ordine degli elementi di una lista: divide la lista nei singoli elementi e li stampa dall'ultimo al primo. La lista può contenere qualsiasi testo: cifre, numeri, parole, frasi. Il separatore può anche essere un'espressione regolare: ad esempio /[;,]/ accetta elementi separati da virgola o punto e virgola. Puoi personalizzare i separatori in ingresso e in uscita nelle opzioni; di default sono entrambi virgole.",
+      "title": "Cos'è un invertitore di liste?"
+    }
+  },
+  "rotate": {
+    "description": "Strumento semplicissimo per ruotare gli elementi di una lista: li sposta di un certo numero di posizioni. Ideale per spostamenti circolari o per riordinare liste.",
+    "shortDescription": "Ruota gli elementi di una lista",
+    "title": "Ruota"
+  },
+  "shuffle": {
+    "delimiterDescription": "Simbolo o espressione regolare di separazione.",
+    "description": "Strumento semplicissimo per mescolare gli elementi di una lista in ordine casuale. Ideale per creare varietà, fare test o rimescolare dati ordinati.",
+    "inputListSeparator": "Separatore in ingresso",
+    "inputTitle": "Lista in ingresso",
+    "joinSeparatorDescription": "Separatore della lista mescolata.",
+    "outputLengthDescription": "Quanti elementi casuali mostrare",
+    "resultTitle": "Lista mescolata",
+    "shortDescription": "Mescola gli elementi di una lista",
+    "shuffledListLength": "Lunghezza della lista",
+    "shuffledListSeparator": "Separatore della lista mescolata",
+    "title": "Mescola"
+  },
+  "sort": {
+    "caseSensitive": "Distingui maiuscole/minuscole",
+    "caseSensitiveDescription": "Ordina separatamente maiuscole e minuscole; in ordine crescente le maiuscole vengono prima. (Solo in ordine alfabetico.)",
+    "description": "Strumento semplicissimo per ordinare gli elementi di una lista in ordine crescente o decrescente. Ideale per organizzare dati e testi.",
+    "inputItemSeparator": "Separatore in ingresso",
+    "inputTitle": "Lista in ingresso",
+    "joinSeparatorDescription": "Simbolo tra gli elementi della lista ordinata.",
+    "orderDescription": "Scegli l'ordine.",
+    "orderOptions": {
+      "decreasing": "Decrescente",
+      "increasing": "Crescente"
+    },
+    "removeDuplicates": "Togli duplicati",
+    "removeDuplicatesDescription": "Elimina gli elementi duplicati.",
+    "resultTitle": "Lista ordinata",
+    "shortDescription": "Ordina gli elementi di una lista",
+    "sortMethod": "Metodo di ordinamento",
+    "sortMethodDescription": "Scegli come ordinare.",
+    "sortOptions": {
+      "alphabetic": "Alfabetico",
+      "length": "Per lunghezza",
+      "numeric": "Numerico"
+    },
+    "sortedItemProperties": "Proprietà degli elementi",
+    "splitOperators": {
+      "regex": {
+        "description": "Separa gli elementi con un'espressione regolare.",
+        "title": "Separa con regex"
+      },
+      "symbol": {
+        "description": "Separa gli elementi con un carattere.",
+        "title": "Separa con simbolo"
+      }
+    },
+    "splitSeparatorDescription": "Simbolo o espressione regolare di separazione.",
+    "title": "Ordina"
+  },
+  "truncate": {
+    "description": "Strumento semplicissimo per accorciare le liste: indica quanti elementi tenere al massimo.",
+    "shortDescription": "Tieni solo un certo numero di elementi",
+    "title": "Accorcia"
+  },
+  "unwrap": {
+    "description": "Strumento semplicissimo per togliere i contorni (virgolette, parentesi…) dagli elementi di una lista.",
+    "shortDescription": "Togli i contorni dagli elementi",
+    "title": "Togli contorni"
+  },
+  "wrap": {
+    "description": "Aggiungi testo prima e dopo ogni elemento della lista.",
+    "inputTitle": "Lista in ingresso",
+    "joinSeparatorDescription": "Separatore della lista risultante",
+    "leftTextDescription": "Testo da aggiungere prima di ogni elemento",
+    "removeEmptyItems": "Togli elementi vuoti",
+    "resultTitle": "Lista con contorni",
+    "rightTextDescription": "Testo da aggiungere dopo ogni elemento",
+    "shortDescription": "Aggiungi testo attorno agli elementi",
+    "splitByRegex": "Separa con espressione regolare",
+    "splitBySymbol": "Separa con simbolo",
+    "splitOptions": "Opzioni di separazione",
+    "splitSeparatorDescription": "Separatore per dividere la lista",
+    "title": "Aggiungi contorni",
+    "toolInfo": {
+      "description": "Questo strumento aggiunge testo prima e dopo ogni elemento di una lista, anche diverso a sinistra e a destra. Utile per aggiungere virgolette, parentesi o altra formattazione e preparare dati per altri formati.",
+      "title": "Contorni per liste"
+    },
+    "wrapOptions": "Opzioni contorni"
+  }
+}

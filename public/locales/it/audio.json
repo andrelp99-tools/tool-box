@@ -1,0 +1,70 @@
+{
+  "changeSpeed": {
+    "description": "Cambia la velocità di riproduzione dei file audio. Accelera o rallenta l'audio mantenendo l'intonazione.",
+    "inputTitle": "Audio in ingresso",
+    "newAudioSpeed": "Nuova velocità",
+    "outputFormat": "Formato di uscita",
+    "resultTitle": "Audio modificato",
+    "settingSpeed": "Imposto la velocità",
+    "shortDescription": "Cambia la velocità dei file audio",
+    "speedDescription": "Moltiplicatore: 2 significa 2 volte più veloce",
+    "title": "Cambia velocità audio"
+  },
+  "extractAudio": {
+    "description": "Estrai la traccia audio dai video.",
+    "extractingAudio": "Estraggo l'audio",
+    "inputTitle": "Video in ingresso",
+    "outputFormat": "Formato di uscita",
+    "outputFormatDescription": "Scegli il formato dell'audio estratto.",
+    "resultTitle": "Audio estratto",
+    "shortDescription": "Estrai l'audio dai video (MP4, MOV, ecc.) in AAC, MP3 o WAV.",
+    "title": "Estrai audio da video",
+    "toolInfo": {
+      "description": "Questo strumento estrae la traccia audio dai video. Puoi scegliere tra diversi formati audio: AAC, MP3 e WAV.",
+      "title": "Cos'è {{title}}?"
+    }
+  },
+  "mergeAudio": {
+    "description": "Unisci più file audio in un unico file, uno dopo l'altro.",
+    "inputTitle": "File audio in ingresso",
+    "longDescription": "Questo strumento unisce più file audio in un unico file, nell'ordine in cui li carichi. Ideale per unire parti di podcast, brani musicali o qualsiasi audio da mettere insieme. Supporta MP3, AAC e WAV.",
+    "outputFormat": "Formato di uscita",
+    "resultTitle": "Audio unito",
+    "shortDescription": "Unisci più file audio in uno (MP3, AAC, WAV).",
+    "title": "Unisci audio",
+    "toolInfo": {
+      "title": "Cos'è {{title}}?"
+    }
+  },
+  "trim": {
+    "description": "Taglia i file audio ed estrai una parte indicando inizio e fine, con precisione al millisecondo.",
+    "endTime": "Fine",
+    "endTimeDescription": "Fine nel formato HH:MM:SS.mmm (es. 00:01:30.450)",
+    "inputTitle": "Audio in ingresso",
+    "longDescription": "Questo strumento taglia i file audio indicando inizio e fine con precisione al millisecondo. Puoi estrarre parti da audio lunghi, togliere pezzi inutili o creare clip brevi. Supporta MP3, AAC e WAV. Ideale per podcast, musica o qualsiasi modifica audio.",
+    "outputFormat": "Formato di uscita",
+    "resultTitle": "Audio tagliato",
+    "shortDescription": "Taglia i file audio ed estrai una parte precisa (MP3, AAC, WAV).",
+    "startTime": "Inizio",
+    "startTimeDescription": "Inizio nel formato HH:MM:SS.mmm (es. 00:00:30.820)",
+    "timeSettings": "Tempi",
+    "title": "Taglia audio",
+    "toolInfo": {
+      "longDescription": "Questo strumento taglia i file audio indicando inizio e fine con precisione al millisecondo. Puoi estrarre parti da audio lunghi, togliere pezzi inutili o creare clip brevi. Supporta MP3, AAC e WAV. Ideale per podcast, musica o qualsiasi modifica audio.",
+      "title": "Cos'è {{title}}?"
+    }
+  },
+  "loop": {
+    "description": "Crea un audio in loop ripetendo l'originale più volte.",
+    "inputTitle": "Audio in ingresso",
+    "loops": "Ripetizioni",
+    "numberOfLoops": "Numero di ripetizioni",
+    "resultTitle": "Audio in loop",
+    "shortDescription": "Crea file audio in loop",
+    "title": "Audio in loop",
+    "toolInfo": {
+      "description": "Questo strumento crea un file audio in loop ripetendo l'originale più volte. Puoi scegliere quante volte ripeterlo.",
+      "title": "Cos'è {{title}}?"
+    }
+  }
+}
