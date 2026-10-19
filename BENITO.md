@@ -26,4 +26,8 @@ Il codice aggiunto è in `src/benito/`; nei file originali solo poche righe marc
 3. ✅ Leggi QR (fotocamera/immagine), QR con stile e logo (motore di Mini QR), Proteggi foto (volti sfocati + via EXIF/GPS),
    Ritaglia per social, Comprimi video a dimensione obiettivo (WebCodecs, sostituisce quello ffmpeg), OCR in italiano.
    Rilevamento volti: MediaPipe con WASM e modello serviti dall'app (copiati in fase di build).
-4. Strumenti PDF da BentoPDF: pagine, firma e moduli, conversioni, sicurezza e pulizia
+4. ✅ Strumenti PDF (funzioni ispirate a BentoPDF, riscritte): Organizza, Firma, Compila modulo, Numeri di pagina e
+   intestazioni, Filigrana e timbri, Ritaglia margini, PDF in immagini, PDF in testo, Scansione in PDF, OCR PDF
+   (ricercabile), Sblocca (qpdf WASM), Rimuovi metadati, Oscura, Appiattisci, Bianco e nero, Ripara.
+   Nascosti: editor SimplePDF (servizio esterno), PDF→PNG e Ruota PDF (coperti da PDF in immagini e Organizza).
+   In sospeso (motori pesanti, da decidere): Word/Excel/PowerPoint→PDF, PDF→Word, conversione documenti.

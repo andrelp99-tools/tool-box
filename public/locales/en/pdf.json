@@ -135,5 +135,85 @@
       "description": "This tool allows you to extract specific pages from a PDF document. You can specify individual pages or ranges of pages to extract.",
       "title": "Split PDF"
     }
+  },
+  "benitoOrganize": {
+    "title": "Organize PDF",
+    "description": "Reorder, rotate, delete, duplicate and extract pages, or add blank pages, with page previews.",
+    "shortDescription": "Reorder, rotate, delete and extract pages"
+  },
+  "benitoPageNumbers": {
+    "title": "Page numbers, header and footer",
+    "description": "Add page numbers, a header or a footer to every page: position, format (\"Page 1 of 10\"), size and first page.",
+    "shortDescription": "Add page numbers and header/footer text"
+  },
+  "benitoCrop": {
+    "title": "Crop PDF margins",
+    "description": "Trim the margins of the pages, with a live preview.",
+    "shortDescription": "Trim the margins of PDF pages"
+  },
+  "benitoSign": {
+    "title": "Sign PDF",
+    "description": "Draw your signature with your finger, type it or use a picture, then place it on the pages you want.",
+    "shortDescription": "Sign a PDF by drawing or typing your signature"
+  },
+  "benitoForms": {
+    "title": "Fill PDF form",
+    "description": "Fill in the fields of a PDF form (text, checkboxes, menus) and optionally lock them.",
+    "shortDescription": "Fill in PDF forms"
+  },
+  "benitoWatermark": {
+    "title": "Watermark and stamps",
+    "description": "Add a text watermark or a stamp (\"COPY\", \"APPROVED\", date…) to the pages, with size, color, opacity and position.",
+    "shortDescription": "Add watermarks or stamps to a PDF"
+  },
+  "benitoToImages": {
+    "title": "PDF to images",
+    "description": "Turn every page into a JPG, PNG or WebP picture, choosing the quality (DPI).",
+    "shortDescription": "Convert PDF pages to JPG, PNG or WebP"
+  },
+  "benitoToText": {
+    "title": "PDF to text",
+    "description": "Extract all the text of a PDF as a .txt file.",
+    "shortDescription": "Extract the text of a PDF"
+  },
+  "benitoScan": {
+    "title": "Scan to PDF",
+    "description": "Turn photos of documents into a clean PDF like a scanner: black and white or grayscale, more contrast, A4 pages.",
+    "shortDescription": "Turn photos of documents into a scanned-looking PDF"
+  },
+  "benitoOcr": {
+    "title": "OCR PDF",
+    "description": "Recognise the text in scanned PDFs: get a searchable PDF (you can select and copy the text) and the plain text.",
+    "shortDescription": "Make scanned PDFs searchable and copyable"
+  },
+  "benitoUnlock": {
+    "title": "Unlock PDF",
+    "description": "Remove the password and the restrictions (print, copy) from a PDF you have the password for.",
+    "shortDescription": "Remove password and restrictions from a PDF"
+  },
+  "benitoMetadata": {
+    "title": "Remove PDF metadata",
+    "description": "Delete author, title, software, dates and other hidden information from a PDF.",
+    "shortDescription": "Delete hidden information from a PDF"
+  },
+  "benitoRedact": {
+    "title": "Redact PDF",
+    "description": "Cover text and areas with black boxes for good: the marked pages are converted to images, so the hidden content cannot be recovered.",
+    "shortDescription": "Black out sensitive parts of a PDF permanently"
+  },
+  "benitoFlatten": {
+    "title": "Flatten PDF",
+    "description": "Make form fields and annotations part of the page, so they cannot be changed anymore.",
+    "shortDescription": "Lock forms and annotations into the page"
+  },
+  "benitoGrayscale": {
+    "title": "PDF to grayscale",
+    "description": "Convert a color PDF to grayscale, for printing or to save ink.",
+    "shortDescription": "Convert a PDF to black and white"
+  },
+  "benitoRepair": {
+    "title": "Repair PDF",
+    "description": "Try to fix damaged PDFs that do not open or show errors.",
+    "shortDescription": "Fix damaged PDF files"
   }
 }

@@ -62,7 +62,7 @@ function toolAccepts(tool: DefinedTool): Kind[] {
     case 'audio':
       return p.includes('extract-audio') ? ['video'] : ['audio'];
     case 'pdf':
-      return p.includes('convert-to-pdf') ? ['image'] : ['pdf'];
+      return p.includes('convert-to-pdf') || p.includes('scansione') ? ['image'] : ['pdf'];
     case 'converters':
       if (p.includes('converti')) return ['image', 'audio', 'video'];
       if (p.includes('audio')) return ['audio'];

@@ -135,5 +135,85 @@
       "description": "Questo strumento estrae pagine specifiche da un PDF. Puoi indicare singole pagine o intervalli.",
       "title": "Dividi PDF"
     }
+  },
+  "benitoOrganize": {
+    "title": "Organizza PDF",
+    "description": "Riordina, ruota, elimina, duplica ed estrai pagine, o aggiungi pagine bianche, con le anteprime delle pagine.",
+    "shortDescription": "Riordina, ruota, elimina ed estrai pagine"
+  },
+  "benitoPageNumbers": {
+    "title": "Numeri di pagina e intestazioni",
+    "description": "Aggiungi numeri di pagina, intestazione o piè di pagina a ogni pagina: posizione, formato (\"Pagina 1 di 10\"), dimensione e prima pagina.",
+    "shortDescription": "Aggiungi numeri di pagina, intestazione e piè di pagina"
+  },
+  "benitoCrop": {
+    "title": "Ritaglia margini PDF",
+    "description": "Taglia i margini delle pagine, con anteprima in tempo reale.",
+    "shortDescription": "Taglia i margini delle pagine del PDF"
+  },
+  "benitoSign": {
+    "title": "Firma PDF",
+    "description": "Disegna la firma col dito, scrivila o usa un'immagine, poi mettila sulle pagine che vuoi.",
+    "shortDescription": "Firma un PDF disegnando o scrivendo la firma"
+  },
+  "benitoForms": {
+    "title": "Compila modulo PDF",
+    "description": "Compila i campi di un modulo PDF (testo, caselle, menu) e, se vuoi, bloccali.",
+    "shortDescription": "Compila i moduli PDF"
+  },
+  "benitoWatermark": {
+    "title": "Filigrana e timbri",
+    "description": "Aggiungi una filigrana di testo o un timbro (\"COPIA\", \"APPROVATO\", data…) alle pagine, con dimensione, colore, opacità e posizione.",
+    "shortDescription": "Aggiungi filigrane o timbri a un PDF"
+  },
+  "benitoToImages": {
+    "title": "PDF in immagini",
+    "description": "Trasforma ogni pagina in un'immagine JPG, PNG o WebP, scegliendo la qualità (DPI).",
+    "shortDescription": "Converti le pagine del PDF in JPG, PNG o WebP"
+  },
+  "benitoToText": {
+    "title": "PDF in testo",
+    "description": "Estrai tutto il testo di un PDF in un file .txt.",
+    "shortDescription": "Estrai il testo di un PDF"
+  },
+  "benitoScan": {
+    "title": "Scansione in PDF",
+    "description": "Trasforma le foto dei documenti in un PDF pulito come da scanner: bianco e nero o grigi, più contrasto, pagine A4.",
+    "shortDescription": "Trasforma foto di documenti in un PDF da scanner"
+  },
+  "benitoOcr": {
+    "title": "OCR PDF",
+    "description": "Riconosci il testo nei PDF scansionati: ottieni un PDF ricercabile (puoi selezionare e copiare il testo) e il testo semplice.",
+    "shortDescription": "Rendi ricercabili e copiabili i PDF scansionati"
+  },
+  "benitoUnlock": {
+    "title": "Sblocca PDF",
+    "description": "Togli la password e le restrizioni (stampa, copia) da un PDF di cui conosci la password.",
+    "shortDescription": "Togli password e restrizioni da un PDF"
+  },
+  "benitoMetadata": {
+    "title": "Rimuovi metadati PDF",
+    "description": "Cancella autore, titolo, programma usato, date e altre informazioni nascoste di un PDF.",
+    "shortDescription": "Cancella le informazioni nascoste di un PDF"
+  },
+  "benitoRedact": {
+    "title": "Oscura PDF",
+    "description": "Copri testo e aree con rettangoli neri in modo definitivo: le pagine segnate vengono trasformate in immagini, così il contenuto nascosto non si può recuperare.",
+    "shortDescription": "Oscura definitivamente parti sensibili di un PDF"
+  },
+  "benitoFlatten": {
+    "title": "Appiattisci PDF",
+    "description": "Rendi campi dei moduli e annotazioni parte della pagina, così non si possono più modificare.",
+    "shortDescription": "Blocca moduli e annotazioni nella pagina"
+  },
+  "benitoGrayscale": {
+    "title": "PDF in bianco e nero",
+    "description": "Converti un PDF a colori in scala di grigi, per stampare o risparmiare inchiostro.",
+    "shortDescription": "Converti un PDF in scala di grigi"
+  },
+  "benitoRepair": {
+    "title": "Ripara PDF",
+    "description": "Prova a sistemare i PDF danneggiati che non si aprono o danno errori.",
+    "shortDescription": "Ripara i file PDF danneggiati"
   }
 }
