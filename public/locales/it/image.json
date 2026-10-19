@@ -388,5 +388,20 @@
       "longDescription": "Aggiunge filigrane di testo personalizzabili a una o più immagini: puoi usare il nome di ogni file o lo stesso testo per tutte. Le filigrane proteggono il tuo lavoro, indicano chi è l'autore e aiutano a organizzare le raccolte. Puoi scegliere dimensione, opacità, colore e posizione mantenendo la qualità originale.",
       "title": "Cos'è la filigrana per immagini?"
     }
+  },
+  "benitoQrReader": {
+    "title": "Leggi QR",
+    "description": "Leggi un codice QR o a barre con la fotocamera o da un'immagine (screenshot, foto). Link, reti WiFi, contatti e testo vengono riconosciuti e puoi aprirli o copiarli.",
+    "shortDescription": "Leggi QR e codici a barre con la fotocamera o da un'immagine"
+  },
+  "benitoPhotoPrivacy": {
+    "title": "Proteggi foto",
+    "description": "Sfoca volti e altri dettagli, poi salva una copia pulita senza dati nascosti (EXIF, posizione GPS, modello del telefono). I volti vengono trovati in automatico; puoi aggiungere o togliere aree a mano.",
+    "shortDescription": "Sfoca volti e togli i dati nascosti (GPS, EXIF) prima di condividere"
+  },
+  "benitoSocialCrop": {
+    "title": "Ritaglia per social",
+    "description": "Ritaglia una foto nella misura esatta per Instagram, Storie, TikTok, WhatsApp, Facebook, YouTube e altri, scegliendo col dito la parte visibile.",
+    "shortDescription": "Ritaglia le foto nella misura giusta per ogni social"
   }
 }

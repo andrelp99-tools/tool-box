@@ -46,3 +46,6 @@ dist.zip
 error.txt
 
 .idea/
+
+# BenitoTools: file generati da scripts/benito-assets.mjs e dal workflow
+/public/mediapipe

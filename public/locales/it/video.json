@@ -177,5 +177,10 @@
     "startTime": "Inizio",
     "timestamps": "Tempi",
     "title": "Taglia video"
+  },
+  "benitoCompress": {
+    "title": "Comprimi video",
+    "description": "Riduci un video a una dimensione precisa (per esempio per mandarlo su WhatsApp o via email) o per qualità, direttamente sul dispositivo e molto più veloce grazie alla codifica hardware.",
+    "shortDescription": "Riduci i video a una dimensione precisa (WhatsApp, email…)"
   }
 }

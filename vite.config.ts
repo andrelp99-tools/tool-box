@@ -24,7 +24,7 @@ export default defineConfig({
       injectRegister: 'auto',
       injectManifest: {
         globPatterns: ['**/*.{js,css,html,png,ico,svg,json,woff2}'],
-        globIgnores: ['**/locales/!(it|en)/**', 'docs-images/**'],
+        globIgnores: ['**/locales/!(it|en)/**', 'docs-images/**', 'mediapipe/**'],
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024
       },
       manifest: {

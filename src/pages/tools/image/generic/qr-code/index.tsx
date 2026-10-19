@@ -10,18 +10,23 @@ import ColorSelector from '@components/options/ColorSelector';
 import ToolFileResult from '@components/result/ToolFileResult';
 import { debounce } from 'lodash';
 import { generateQrCodeFile } from './service';
+import { QrStyleOptions } from '../../../../../benito/tools/qr-style/QrStyleOptions';
+import { useBt } from '../../../../../benito/strings';
 
 const initialValues: InitialValuesType = {
   qrCodeType: 'URL',
 
   // Common settings
-  size: '200',
+  size: '600',
   bgColor: '#FFFFFF',
   fgColor: '#000000',
   correctionLevel: 'M',
+  dotStyle: 'square',
+  cornerStyle: 'square',
+  logo: '',
 
   // URL
-  url: 'https://example.com',
+  url: 'https://',
 
   // Text
   text: '',
@@ -54,6 +59,7 @@ const initialValues: InitialValuesType = {
 };
 export default function QRCodeGenerator({ title }: ToolComponentProps) {
   const { t } = useTranslation('image');
+  const bt = useBt();
   const [result, setResult] = useState<File | null>(null);
 
   const getGroups: GetGroupsType<InitialValuesType> = ({
@@ -155,6 +161,11 @@ export default function QRCodeGenerator({ title }: ToolComponentProps) {
             />
           </Box>
         )
+      },
+      // BenitoTools: stile del QR (punti, angoli, logo)
+      {
+        title: bt.qrStyle.title,
+        component: <QrStyleOptions values={values} updateField={updateField} />
       },
       // Dynamic form fields based on QR code type
       {

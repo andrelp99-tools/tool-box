@@ -9,12 +9,15 @@ import { tool as loopVideo } from './loop/meta';
 import { tool as cropVideo } from './crop-video/meta';
 import { tool as addAudio } from './add-audio/meta';
 import { tool as resizeVideo } from './resize/meta';
+// BenitoTools: compressore veloce (WebCodecs) al posto di quello ffmpeg.wasm
+import { tool as benitoCompress } from '../../../benito/tools/video-compress/meta';
+void compressVideo;
 
 export const videoTools = [
   ...gifTools,
   trimVideo,
   rotateVideo,
-  compressVideo,
+  benitoCompress,
   loopVideo,
   flipVideo,
   cropVideo,

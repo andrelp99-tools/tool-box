@@ -11,8 +11,15 @@ import { tool as qrCodeGenerator } from './qr-code/meta';
 import { tool as rotateImage } from './rotate/meta';
 import { tool as imageEditor } from './editor/meta';
 import { tool as watermark } from './watermark/meta';
+// BenitoTools
+import { tool as benitoQrReader } from '../../../../benito/tools/qr-reader/meta';
+import { tool as benitoPhotoPrivacy } from '../../../../benito/tools/photo-privacy/meta';
+import { tool as benitoSocialCrop } from '../../../../benito/tools/social-crop/meta';
 
 export const imageGenericTools = [
+  benitoQrReader,
+  benitoPhotoPrivacy,
+  benitoSocialCrop,
   imageEditor,
   resizeImage,
   compressImage,

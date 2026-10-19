@@ -74,6 +74,12 @@ const Q = { low: QUALITY_LOW, medium: QUALITY_MEDIUM, high: QUALITY_HIGH };
 
 export interface MediaOptions {
   quality?: MediaQuality;
+  /** Bitrate video in bit/s (ha la precedenza su quality). */
+  videoBitrate?: number;
+  /** Bitrate audio in bit/s. */
+  audioBitrate?: number;
+  /** Toglie l'audio dal video. */
+  noAudio?: boolean;
   /** Lato lungo massimo in pixel (solo video). */
   maxSide?: number;
   onProgress?: (p: number) => void;
@@ -88,7 +94,7 @@ export async function convertMedia(file: File, to: string, opts: MediaOptions = 
   const output = new Output({ format: outputFormat(to), target });
   try {
     const q = Q[opts.quality ?? 'medium'];
-    let video: Record<string, unknown> = { bitrate: q };
+    let video: Record<string, unknown> = { bitrate: opts.videoBitrate ?? q, forceTranscode: !!opts.videoBitrate };
     if (audioOnly) video = { discard: true };
     else if (opts.maxSide) {
       const track = await input.getPrimaryVideoTrack();
@@ -109,7 +115,7 @@ export async function convertMedia(file: File, to: string, opts: MediaOptions = 
       input,
       output,
       video,
-      audio: { bitrate: q }
+      audio: opts.noAudio ? { discard: true } : { bitrate: opts.audioBitrate ?? q }
     });
     if (!conversion.isValid) {
       const reasons = conversion.discardedTracks.map((d) => `${d.track.type}: ${d.reason}`).join(', ');
@@ -121,6 +127,29 @@ export async function convertMedia(file: File, to: string, opts: MediaOptions = 
     const buf = target.buffer;
     if (!buf) throw new Error('Nessun risultato');
     return new File([buf], renamed(file.name, to), { type: MIME[to] ?? 'application/octet-stream' });
+  } finally {
+    input.dispose();
+  }
+}
+
+export interface MediaInfo {
+  duration: number;
+  width: number;
+  height: number;
+  hasAudio: boolean;
+}
+
+export async function getMediaInfo(file: File): Promise<MediaInfo> {
+  const input = new Input({ formats: ALL_FORMATS, source: new BlobSource(file) });
+  try {
+    const v = await input.getPrimaryVideoTrack();
+    const a = await input.getPrimaryAudioTrack();
+    return {
+      duration: await input.computeDuration(),
+      width: v?.displayWidth ?? 0,
+      height: v?.displayHeight ?? 0,
+      hasAudio: !!a
+    };
   } finally {
     input.dispose();
   }

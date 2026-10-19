@@ -177,5 +177,10 @@
     "startTime": "Start Time",
     "timestamps": "Timestamps",
     "title": "Trim Video"
+  },
+  "benitoCompress": {
+    "title": "Compress video",
+    "description": "Shrink a video to a target size (for example to send it on WhatsApp or by email) or by quality, directly on the device and much faster thanks to hardware encoding.",
+    "shortDescription": "Shrink videos to a target size (WhatsApp, email…)"
   }
 }

@@ -12,9 +12,10 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { extractTextFromImage, getAvailableLanguages } from './service';
 import { InitialValuesType } from './types';
 import { CustomSnackBarContext } from '../../../../../contexts/CustomSnackBarContext';
+import { useBt } from '../../../../../benito/strings';
 
 const initialValues: InitialValuesType = {
-  language: 'eng',
+  language: 'ita', // BenitoTools: italiano predefinito
   detectParagraphs: true
 };
 
@@ -27,6 +28,7 @@ export default function ImageToText({ title }: ToolComponentProps) {
   const [result, setResult] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const { showSnackBar } = useContext(CustomSnackBarContext);
+  const bt = useBt();
   const compute = async (optionsValues: InitialValuesType, input: any) => {
     if (!input) return;
 
@@ -37,7 +39,7 @@ export default function ImageToText({ title }: ToolComponentProps) {
       setResult(extractedText);
     } catch (err: any) {
       showSnackBar(
-        err.message || 'An error occurred while processing the image',
+        err.message || bt.ocr.error,
         'error'
       );
       setResult('');
@@ -51,24 +53,23 @@ export default function ImageToText({ title }: ToolComponentProps) {
     updateField
   }) => [
     {
-      title: 'OCR Options',
+      title: bt.ocr.options,
       component: (
         <Box>
           <SelectWithDesc
             selected={values.language}
             onChange={(val) => updateField('language', val)}
-            description={
-              'Select the primary language in the image for better accuracy'
-            }
-            options={getAvailableLanguages()}
+            description={bt.ocr.languageDesc}
+            options={getAvailableLanguages().map((l) => ({
+              ...l,
+              label: bt.ocr.languages[l.value as keyof typeof bt.ocr.languages] ?? l.label
+            }))}
           />
           <CheckboxWithDesc
             checked={values.detectParagraphs}
             onChange={(value) => updateField('detectParagraphs', value)}
-            description={
-              'Attempt to preserve paragraph structure in the extracted text'
-            }
-            title={'Detect Paragraphs'}
+            description={bt.ocr.paragraphsDesc}
+            title={bt.ocr.paragraphs}
           />
         </Box>
       )
@@ -88,20 +89,19 @@ export default function ImageToText({ title }: ToolComponentProps) {
           value={input}
           onChange={setInput}
           accept={['image/jpeg', 'image/png']}
-          title={'Input Image'}
+          title={bt.ocr.input}
         />
       }
       resultComponent={
         <ToolTextResult
-          title={'Extracted Text'}
+          title={bt.ocr.result}
           value={result}
           loading={isProcessing}
         />
       }
       toolInfo={{
-        title: 'Image to Text (OCR)',
-        description:
-          'This tool extracts text from images using Optical Character Recognition (OCR). Upload an image containing text, select the primary language, and get the extracted text. For best results, use clear images with good contrast.'
+        title: bt.ocr.infoTitle,
+        description: bt.ocr.info
       }}
     />
   );

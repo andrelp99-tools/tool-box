@@ -20,6 +20,11 @@ export interface InitialValuesType {
   fgColor: string;
   correctionLevel: QRErrorCorrectionLevel;
 
+  // BenitoTools: stile (motore qr-code-styling, come Mini QR)
+  dotStyle?: 'square' | 'dots' | 'rounded' | 'classy' | 'classy-rounded' | 'extra-rounded';
+  cornerStyle?: 'square' | 'dot' | 'extra-rounded';
+  logo?: string; // data URL
+
   // URL
   url: string;
 

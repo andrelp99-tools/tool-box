@@ -63,11 +63,37 @@ END:VCARD`;
  * downloadable PNG File. Returns null if there's nothing to encode yet
  * (e.g. required field for the current type is still empty).
  */
-export function generateQrCodeFile(
+export async function generateQrCodeFile(
   options: InitialValuesType
 ): Promise<File | null> {
   const qrValue = formatQRCodeData(options);
-  if (!qrValue) return Promise.resolve(null);
+  if (!qrValue) return null;
+
+  // BenitoTools: con uno stile o un logo usa qr-code-styling (motore di Mini QR)
+  if (
+    (options.dotStyle && options.dotStyle !== 'square') ||
+    (options.cornerStyle && options.cornerStyle !== 'square') ||
+    options.logo
+  ) {
+    const { default: QRCodeStyling } = await import('qr-code-styling');
+    const size = Number(options.size) || 200;
+    const qr = new QRCodeStyling({
+      width: size,
+      height: size,
+      type: 'canvas',
+      data: qrValue,
+      margin: Math.round(size * 0.04),
+      qrOptions: { errorCorrectionLevel: options.logo ? 'H' : options.correctionLevel },
+      dotsOptions: { type: options.dotStyle ?? 'square', color: options.fgColor },
+      cornersSquareOptions: { type: options.cornerStyle ?? 'square', color: options.fgColor },
+      cornersDotOptions: { type: options.cornerStyle === 'square' ? 'square' : 'dot', color: options.fgColor },
+      backgroundOptions: { color: options.bgColor },
+      image: options.logo || undefined,
+      imageOptions: { margin: 4, hideBackgroundDots: true, imageSize: 0.3 }
+    });
+    const blob = (await qr.getRawData('png')) as Blob;
+    return new File([blob], 'qr-code.png', { type: 'image/png' });
+  }
 
   const canvas = document.createElement('canvas');
 

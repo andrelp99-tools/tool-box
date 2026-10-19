@@ -388,5 +388,20 @@
       "longDescription": "An image watermark tool lets you add customizable text watermarks to one or more images. You can automatically use each image's filename as the watermark or apply the same custom text to every image. Watermarks help protect your work, identify ownership, promote your brand, and organize image collections. Customize the font size, opacity, color, and position while preserving the original image quality.",
       "title": "What is Watermark Images ?"
     }
+  },
+  "benitoQrReader": {
+    "title": "Read QR code",
+    "description": "Scan a QR code or barcode with the camera or from a picture (screenshot, photo). Links, WiFi networks, contacts and text are recognised and can be opened or copied.",
+    "shortDescription": "Scan QR codes and barcodes with the camera or from a picture"
+  },
+  "benitoPhotoPrivacy": {
+    "title": "Protect photo",
+    "description": "Blur faces and other details, then save a clean copy without hidden data (EXIF, GPS position, camera model). Faces are found automatically; you can add or remove areas by hand.",
+    "shortDescription": "Blur faces and remove hidden data (GPS, EXIF) before sharing"
+  },
+  "benitoSocialCrop": {
+    "title": "Crop for social media",
+    "description": "Crop a picture to the exact size for Instagram, Stories, TikTok, WhatsApp, Facebook, YouTube and more, choosing the visible area with your finger.",
+    "shortDescription": "Crop pictures to the right size for each social network"
   }
 }

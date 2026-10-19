@@ -52,7 +52,7 @@ function toolAccepts(tool: DefinedTool): Kind[] {
   const p = tool.path;
   switch (tool.type) {
     case 'image-generic':
-      return p.includes('qr-code') ? [] : p.includes('image-to-text') ? ['png', 'jpeg'] : ['image'];
+      return p.endsWith('qr-code') ? [] : p.includes('image-to-text') ? ['png', 'jpeg'] : ['image'];
     case 'png':
       return p.includes('jgp-to-png') || p.includes('jpg-to-png') ? ['jpeg'] : ['png'];
     case 'gif':
